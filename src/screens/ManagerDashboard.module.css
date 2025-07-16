@@ -1,0 +1,7 @@
+.welcomeNamediv{
+    width: 106%;
+    height: 35px;
+    max-height: 40px;
+    overflow: auto;
+    border-radius: 7px 0px 0px 0px;
+}
