@@ -1,0 +1,213 @@
+.mainContainer {
+  font-size: 0.7rem;
+}
+
+.bgColor {
+  background-color: #e6f4fd !important;
+}
+
+.listItem {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+
+.sectionBox {
+  max-height: 38vh;
+  min-height: 38vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.sectionHeader {
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.sectionContent {
+  overflow-y: auto;
+  /* padding: 1rem; */
+  flex: 1;
+}
+.customSmallSelect {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  height: auto;
+}
+.iconStyle {
+  color: #6ebfeb;
+}
+/* Team */
+.zie{
+  width: 47%;
+}
+.teamText{
+  font-size: 1.0rem;
+  font-weight: 800;
+  padding-left: 10px;
+  margin-top: -8px;
+  margin-bottom: 4px;
+  color: #536670;
+
+}
+
+.teamSideText{
+  font-size: clamp(0.8rem, 2vw + 0.5rem, 0.5rem);
+  margin-bottom: 3px;
+  margin-top: -8px;
+}
+.team li{
+  border: none;
+  
+}
+.team select{
+  font-size: 0.8rem;
+}
+
+/* Zielvereinbarungen & Einstellungen  */
+.zie select,.zie input {
+  font-size: 0.7rem;
+  margin-bottom: 10px;
+  
+}
+.zieLastRow input,button {
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+}
+.zieContent{
+  margin-top: -5px;
+}
+.zie input{
+  padding: 6px;
+}
+.zie label{
+  margin: 0px;
+}
+.zieMonSelect{
+  margin-bottom: 0px !important;
+  width: 145% !important;
+
+}
+.zieBtn{
+  margin-left: 20px;
+  background-color: rgb(37, 77, 169);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* web portal user */
+.webPortalUser select{
+  font-size: 0.8rem;
+}
+.webPortalUser p{
+  margin-top: -11px;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+.bgWhite {
+  background-color: #ffffff;
+}
+
+.bgLightBlue {
+  background-color: #e6f4fd;
+}
+
+.userName {
+  color: blue;
+  font-size: 0.85rem;
+}
+/* Kapazitäten-Übersicht */
+.kap{
+  width: 35%;
+}
+.kapInput{
+  width: 70%;
+  margin-left: 20px;
+}
+.kapTitle{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #536670;
+}
+.kap p{
+  font-size: 0.7rem;
+  margin-top: -8px;
+  margin-bottom: 3px;
+}
+.kap input{
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  padding: 3px;
+  border: 2px solid #ced4da;
+  border-radius: 4px;
+}
+.kapSubTitle{
+  font-size: 0.7rem;
+  padding-left: 15px;
+}
+.fixedWidth {
+  width: 60px;
+}
+/* lead status */
+.leadstatusSubText{
+  font-size: 0.8rem;
+  margin-top: -8px;
+  margin-bottom: 3px;
+}
+.lead button{
+  font-size: 0.8rem;
+   background-color: rgb(37, 77, 169);
+}
+.leadStatusText{
+  font-size: 1.0rem;
+  font-weight: 800;
+  margin-top: -10px;
+  margin-bottom: 4px;
+}
+/* .kap{
+  width: 40%;
+}
+.lead{
+  margin-left: -3px;
+  width: 132%;
+}
+.projekt{
+        margin-left: 65px;
+    width: 107%;
+
+}
+.zie{
+    width: 47% !important;
+  } */
+@media (min-width: 1400px){
+  .outWidth{
+    width: 104% !important;
+  }
+  .zie{
+    width: 47% !important;
+  }
+  .kap{
+  width: 40% !important;
+}
+.lead{
+  margin-left: -3px;
+  width: 103%;
+}
+.projekt{
+        margin-left: -10px;
+    width: 107%;
+
+}
+.zie{
+    width: 47% !important;
+  }
+}

@@ -1,0 +1,158 @@
+.kontakteContainer {
+    font-size: 12px;
+    background-color: white;
+    height: 58vh;
+    padding-left: 20px;
+    width: 100% !important;
+}
+
+/* Table headers */
+.tableHeader p {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* Row styles */
+.contactRow {
+    padding: 8px 0;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.75rem;
+}
+
+.activeRow {
+    background-color: #092b3d;
+    color: white;
+}
+
+.activeRow .contactName,
+.activeRow .contactPosition,
+.activeRow .leadStatus,
+.activeRow .contactDate {
+    color: white;
+}
+
+/* Checkbox styling */
+.phoneCheckbox {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 0;
+    margin-left: 5px;
+}
+
+.checkboxInput {
+    width: 0.9em;
+    height: 0.9em;
+    margin-top: 0;
+    cursor: pointer;
+    border: 1.5px solid #1e2b3e;
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: white;
+    position: relative;
+}
+
+.checkboxInput:checked {
+    background-color: #1e2b3e;
+    border-color: #1e2b3e;
+}
+
+.checkboxInput:checked::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 2px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 1.5px 1.5px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Text styles */
+.contactName {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.contactPosition {
+    font-size: 0.7rem;
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+.leadStatus {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.contactDate {
+    font-size: 0.7rem;
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+.kontakteHeader p {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.favoritesText {
+    font-size: 0.75rem;
+}
+
+/* Form styles */
+.contactDetailRow {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-label {
+    font-size: 0.7rem;
+    color: #333;
+}
+
+/* .form-control,
+.form-select {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    height: auto;
+} */
+
+.form-control,
+.form-select {
+    font-size: 0.7rem;
+    padding: 2px 4px;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid #999;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    box-shadow: none;
+}
+.form-control{
+    border: none;
+    border-bottom: 2px solid blackx;
+}
+.kInput{
+    border: none !important;
+    border-bottom: 2px solid black !important;
+    border-radius: 0px !important;
+}
+.input1{
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+}

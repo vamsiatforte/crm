@@ -19,17 +19,17 @@ const ManagerDashboard = () => {
       setCurrentTime(berlinTime);
     };
 
-    updateTime(); // initial call
-    const interval = setInterval(updateTime, 1000); // update every second
+    updateTime(); 
+    const interval = setInterval(updateTime, 1000); 
 
-    return () => clearInterval(interval); // cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
     <div className="container">
       <h1 className="text-white">Manager Dashboard</h1>
       <p className="text-white">{currentTime}</p>
-      <div className={`bg-white p-1 d-flex  justify-content-start ${styles.welcomeNamediv}`}>
+      <div className={`bg-white pl-1 d-flex  justify-content-start ${styles.welcomeNamediv}`}>
         <p>hello</p>
       </div>
       <p className="text-white">© 2023 Sales People GmbH. Alle Rechte vorbehalten.</p>

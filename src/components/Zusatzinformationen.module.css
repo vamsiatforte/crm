@@ -1,0 +1,129 @@
+.ziContainer {
+  padding: 0;
+}
+
+.ziCard {
+  padding: 20px 20px;
+  /* border-radius: 6px; */
+  background-color: #fff;
+  /* Added background */
+}
+
+.ziTitle {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+  /* Added color */
+}
+
+.ziLabel {
+  color:black;
+  font-size: 0.68rem;
+  margin-bottom: 1px;
+  display: block;
+  font-weight: 900;
+}
+
+.ziValue {
+  font-size: 0.68rem;
+  font-weight: bold;
+  border-bottom: 1.5px solid rgba(149, 144, 144, 0.979);
+  padding: 0 4px;
+  line-height: 1;
+  color: #333;
+  /* Added color */
+}
+
+.ziSelect,
+.ziSelectFull {
+  width: 100%;
+  font-size: 0.68rem;
+  font-weight: 500;
+  border: none;
+  border-bottom: 1.5px solid rgba(149, 144, 144, 0.979);
+  background-color: transparent;
+  color: #333;
+  /* Changed from white to dark color */
+  line-height: 1.1;
+  height: 20px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+  padding-right: 15px;
+}
+
+.ziSelect:focus,
+.ziSelectFull:focus {
+  outline: none;
+}
+
+.ziProgressWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ziProgressBar {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #ccc;
+  /* border-radius: 3px; */
+  overflow: hidden;
+}
+
+.ziProgressFill {
+  height: 100%;
+  background-color: #00c851;
+  transition: width 0.3s ease;
+  width: 56%;
+  background: #22b6ea;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.3s;
+}
+
+.ziPercent {
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #00c851;
+  position: absolute;
+  left:0;
+  width: 56%;
+  color: white;
+  text-align: center;
+  line-height: 36px;
+  font-weight: 600;
+  font-size: 22px;
+  z-index: 1;
+      line-height: 14px;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.specialHeight {
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Dropdown options styling */
+.ziSelect option,
+.ziSelectFull option {
+  color: #333;
+  /* Dark color for options */
+  background-color: #fff;
+  /* White background for options */
+  padding: 5px;
+}
+
+/* Focus state */
+.ziSelect:focus,
+.ziSelectFull:focus {
+  border-bottom-color: #119bd5;
+}

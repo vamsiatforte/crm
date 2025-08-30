@@ -1,0 +1,717 @@
+.sideLine {
+  height: 100vh;
+  color: #1e2b3e;
+}
+
+
+.unteDiv {
+
+  padding-left: 24px;
+  width: 74%;
+}
+.bgColor{
+background-color:  rgb(247, 242, 242);
+}
+.pageWrapper {
+  background: rgb(247, 242, 242);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 0;
+  overflow: hidden;
+}
+
+.headerRow {
+  background: #1e2b3e;
+  color: #fff;
+  padding: 8px 18px;
+  align-items: center;
+}
+
+.headerTitle {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.headerDate {
+  font-size: 0.85rem;
+  margin-right: 10px;
+}
+
+.headerUserIcon {
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(30, 43, 62, 0.07);
+  padding: 10px 10px;
+  min-height: 220px;
+  margin-bottom: 10px;
+}
+
+.sectionTitle,
+.sectionTitleSmall {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: #1e2b3e;
+}
+
+.infoRows {
+  font-size: 0.85rem;
+}
+
+.labelSmall {
+  color: #003366;
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-right: 2px;
+  padding: 0;
+}
+
+.dataSmall {
+  color: #222;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-right: 6px;
+  padding: 0;
+}
+
+.iconSmall {
+  width: 13px;
+  height: 13px;
+  margin: 0 1px;
+  vertical-align: middle;
+}
+
+.iconTiny {
+  width: 10px;
+  height: 10px;
+  margin: 0 1px;
+  vertical-align: middle;
+}
+
+.firmaSearchSmall {
+  font-size: 0.85rem;
+  color: #003366;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.firmaIconsSmall {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.firmaRowSmall {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.firmaTextSmall {
+  font-size: 0.82rem;
+  color: #003366;
+  margin-right: 1px;
+}
+
+.firmaTextTiny {
+  font-size: 0.78rem;
+  color: #003366;
+  margin-right: 2px;
+}
+
+.label {
+  font-weight: 500;
+  color: #003366;
+  margin-right: 2px;
+  font-size: 0.85rem;
+  padding: 0;
+}
+
+.data {
+  font-weight: 500;
+  color: #222;
+  margin-right: 6px;
+  font-size: 0.85rem;
+  padding: 0;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+
+.select,
+.selectFull,
+.input {
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 0.85rem;
+  margin-right: 4px;
+  background: #f8f9fa;
+}
+
+.selectFull {
+  min-width: 120px;
+}
+
+.input {
+  min-width: 80px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: #e0e7ef;
+  border-radius: 4px;
+  margin: 4px 0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #119bd5;
+  border-radius: 4px 0 0 4px;
+}
+
+.progressPercent {
+  font-size: 0.82rem;
+  color: #119bd5;
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.adminBtn,
+.ratingBtn {
+  background: #119bd5;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.adminBtn:hover,
+.ratingBtn:hover {
+  background: #003366;
+}
+
+.tabHeader {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.tabActive {
+  font-weight: bold;
+  color: #119bd5;
+  border-bottom: 2px solid #119bd5;
+  padding-bottom: 1px;
+  font-size: 0.85rem;
+}
+
+.tab {
+  color: #888;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #e0e7ef;
+  padding: 3px 4px;
+  font-size: 0.85rem;
+}
+
+.link {
+  color: #119bd5;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.subText {
+  color: #666;
+  font-size: 0.80rem;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.contactDetails {
+  margin: 4px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.80rem;
+}
+
+.inputLine {
+  display: inline-block;
+  width: 80px;
+  border-bottom: 1px solid #d1d5db;
+  margin-left: 4px;
+}
+
+.newContact {
+  color: #119bd5;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.callDocHeader {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+.callDocQuestions {
+  margin-bottom: 4px;
+  font-size: 0.80rem;
+}
+
+.callHistoryHeader {
+  font-weight: bold;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+}
+
+.callHistoryBox {
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 4px;
+  padding: 2px 4px;
+  font-size: 0.85rem;
+}
+
+.saveBtn {
+  background: #119bd5;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+.saveBtn:hover {
+  background: #003366;
+}
+
+.callHistoryList {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.callHistoryEntry {
+  margin-bottom: 3px;
+  font-size: 0.80rem;
+}
+
+.callHistoryDate {
+  color: #888;
+  margin-right: 4px;
+  font-size: 0.80rem;
+}
+
+.callHistoryUser {
+  color: #119bd5;
+  margin-right: 4px;
+  font-weight: 500;
+  font-size: 0.80rem;
+}
+
+.callHistoryText {
+  color: #222;
+  font-size: 0.80rem;
+}
+
+.ratingHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #888;
+  cursor: pointer;
+}
+
+.label {
+  color: rgba(149, 144, 144, 0.979);
+  margin-bottom: 0px;
+  font-size: 0.7rem;
+}
+
+
+.data {
+  margin-bottom: 0px;
+  border-bottom: 2px solid rgba(149, 144, 144, 0.979);
+  font-size: 0.7rem;
+  font-weight: bold;
+
+}
+
+.dataDiv {
+  padding: 0px 4px;
+}
+
+.firma {
+  padding: 8px;
+  background-color: rgb(6, 6, 49);
+}
+
+.firmaText {
+  color: white;
+  margin-bottom: 0px;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.firmaTextSmall {
+  color: white;
+  font-weight: 500;
+  font-size: 0.5rem;
+  margin-bottom: 0px;
+}
+
+.firmaImg {
+  width: 31px;
+  height: 30px;
+  display: block;
+  margin: auto;
+}
+
+.firmaImgCall {
+  width: 100%;
+  height: 26px;
+  display: block;
+  margin: auto;
+}
+
+.firmaImg2 {
+  width: 100%;
+  height: 24px;
+  display: block;
+  margin: auto;
+}
+
+.firmaImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* CompaniesInformation.module.css */
+
+/* Container styles */
+.zusatzContainer {
+  padding: 0 10px;
+}
+
+/* Section title */
+.sectionTitle {
+  color: rgba(149, 144, 144, 0.979);
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Custom row styling - scoped to our container */
+.zusatzContainer .rowCustom {
+  margin: 0 -5px 15px -5px;
+}
+
+.zusatzContainer .rowCustom:last-child {
+  margin-bottom: 0;
+}
+
+/* Info group styling */
+.infoGroup {
+  margin-bottom: 0.5rem;
+  padding: 0 5px;
+}
+
+.infoLabel {
+  color: rgba(149, 144, 144, 0.979);
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.infoValue {
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-bottom: 2px solid rgba(149, 144, 144, 0.979);
+  padding-bottom: 0.1rem;
+}
+
+/* Select dropdown styling */
+.selectDropdown {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(149, 144, 144, 0.979);
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.1rem 0;
+  background-color: transparent;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.1rem center;
+  background-size: 1rem;
+}
+
+/* Table styling */
+.tableContainer {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.tableColumn {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.tableColumn:last-child {
+  padding-right: 0;
+}
+
+.tableHeader {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.tableCell {
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-bottom: 2px solid rgba(149, 144, 144, 0.979);
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
+  min-height: 1.2rem;
+}
+
+/* Column padding - scoped to our container */
+.zusatzContainer [class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.ziContainer {
+  padding: 0;
+}
+
+.ziCard {
+  border-radius: 6px;
+}
+
+.ziTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.ziLabel {
+  color: rgba(149, 144, 144, 0.979);
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+
+.ziValue {
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-bottom: 2px solid rgba(149, 144, 144, 0.979);
+  padding: 0 4px;
+}
+
+.ziSelect,
+.ziSelectFull {
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid rgba(149, 144, 144, 0.979);
+  background-color: transparent;
+  color: white;
+  padding: 0 4px;
+  margin-top: 0;
+}
+
+.ziProgressWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ziProgressBar {
+  flex-grow: 1;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.ziProgressFill {
+  height: 100%;
+  background-color: #00c851;
+  transition: width 0.3s ease;
+}
+
+.ziPercent {
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #00c851;
+}
+
+.ziContainer {
+  padding: 0;
+}
+
+.ziCard {
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.ziTitle {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.ziLabel {
+  color: rgba(149, 144, 144, 0.979);
+  font-size: 0.68rem;
+  margin-bottom: 1px;
+  display: block;
+}
+
+.ziValue {
+  font-size: 0.68rem;
+  font-weight: bold;
+  border-bottom: 1.5px solid rgba(149, 144, 144, 0.979);
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.ziSelect,
+.ziSelectFull {
+  width: 100%;
+  font-size: 0.68rem;
+  font-weight: 500;
+  border: none;
+  border-bottom: 1.5px solid rgba(149, 144, 144, 0.979);
+  background-color: transparent;
+  color: white;
+  line-height: 1.1;
+
+  height: 20px;
+}
+
+.ziProgressWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* margin-top: 4px; */
+}
+
+.ziProgressBar {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.ziProgressFill {
+  height: 100%;
+  background-color: #00c851;
+  transition: width 0.3s ease;
+}
+
+.ziPercent {
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #00c851;
+}
+
+.specialHeight {
+  height: 32px;
+}
+
+.downDiv {
+  background-color: rgb(6, 6, 49);
+  padding: 5px;
+      width: 101%;
+    margin-left: 3px;
+}
+
+.down {
+  font-size: o.7rem;
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: start;
+}
+
+.down p {
+  color: gray;
+  font-size: 0.7rem;
+}
+
+.firmaImageWrapper {
+  padding: 0px;
+}
+
+.Unternehmensinformation {
+  background-color: white !important;
+  padding: 10px;
+  height: 236px;
+}
+
+.sideNav {
+  width: 3%;
+  background-color: #1e2b3e;
+  height: 100vh;
+}

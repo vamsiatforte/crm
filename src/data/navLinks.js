@@ -21,7 +21,7 @@ const navLinks = [
       { label: 'Setup', path: '/manager/projects/setup', icon: <SettingsIcon /> },
       { label: 'Export', path: '/manager/projects/export', icon: <ImportExportIcon /> },
       { label: 'Questionnaires', path: '/manager/projects/questionnaires', icon: <QuizIcon /> },
-      { label: 'Web Portal', path: '/manager/projects/webportal', icon: <PublicIcon /> },
+      { label: 'Web Portal', path: '/manager/projects/webPortal', icon: <PublicIcon /> },
     ]
   },
   {

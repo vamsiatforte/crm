@@ -1,9 +1,8 @@
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+
 const Projects = () => {
-  return (
-    <div className="container">
-      <h1>Projects</h1>
-      <p>Here you can manage your projects.</p>
-    </div>
-  );
-}
+  return <Outlet />;
+};
+
 export default Projects;

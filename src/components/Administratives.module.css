@@ -1,0 +1,175 @@
+.selectBottomBorder {
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    width: 100%;
+    font-size: 0.7rem;
+    background-color: transparent;
+    appearance: none;
+    padding: 2px 0;
+    height: 20px;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.selectWrapper {
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+
+.whiteSelector {
+  width: 100%;
+  padding-right: 30px; /* Space for custom icon */
+  appearance: none; /* Removes default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-size: 12px;
+  background-color: #fff;
+}
+
+.whiteSelector option:first-child {
+  color: #9AA6B2; /* Grey color for default option */
+}
+
+.whiteSelector option {
+  color: #000; /* Default for other options */
+}
+
+.whiteSelector option:disabled {
+  color: #9AA6B2; /* Grey for placeholder */
+}
+
+
+.selectWrapper::after {
+    font-size: 0.7rem;
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    pointer-events: none;
+}
+
+.label {
+    font-size: 0.7rem;
+    margin: 0;
+    padding: 0;
+}
+/* Administratives.module.css */
+.label {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.selectWrapper {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.selectBottomBorder {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.25rem 0;
+    background-color: transparent;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.smallText {
+    font-size: 0.7rem;
+    color: white;
+}
+
+.smallButton {
+    border-radius: 0 !important;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    color: white !important;
+}
+
+.dateField {
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.7rem;
+    padding: 0.25rem 0;
+}
+.admin{
+        
+    height: 237px !important;
+}
+.adminDiv{
+    background-color: rgb(28, 28, 45);
+    padding: 10px 24px 10px 30px !important;
+
+}
+
+.blankSpace {
+    height: 1.5rem; 
+}
+.title{
+    color: white;
+}
+
+.admin .col-12,.col-8,.col-9,.col-4,.col-3,.col-6{
+    /* padding: 0px; */
+}
+
+/* Date Picker Styles */
+.datePickerContainer {
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+}
+
+.dateInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.7rem;
+    width: 100%;
+}
+
+.calendarIcon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.calendarIcon svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Calendar Popup Styles */
+.react-datepicker {
+    font-family: inherit;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.react-datepicker__header {
+    background-color: #f8f9fa;
+    border-bottom: none;
+}
+
+.react-datepicker__current-month {
+    font-size: 0.8rem;
+}
+
+.react-datepicker__day {
+    width: 1.8rem;
+    line-height: 1.8rem;
+    font-size: 0.75rem;
+}
+
+.react-datepicker__day--selected {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.react-datepicker__day--today {
+    font-weight: bold;
+}
+.adminTitleDiv{
+    margin-bottom: 5px !important;
+}

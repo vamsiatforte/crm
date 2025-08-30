@@ -1,0 +1,101 @@
+
+.bgColor {
+  background-color: #e6f4fd !important;
+}
+.webPortal{
+    /* background-color: #e6f4fd ; */
+    width: 102%;
+}
+.title{
+    font-size: 1.1rem;
+
+}
+.iconStyle {
+  color: #6ebfeb;
+}
+.textBox{
+    /* background-color: white; */
+    border-radius: 5px;
+    /* margin: 16px 10px 10px 10px ; */
+    font-size: 0.8rem;
+}
+@media (min-width: 1400px){
+    /* .textBox{
+        width: 269px !important;
+    } */
+
+}
+.lead{
+    padding-bottom: 68px !important;
+    height: 237px;
+}
+.tableContainer {
+  padding: 12px;
+  border: 1px solid #dee2e6;
+}
+.webPortalText{
+    font-size: 0.8rem;
+}
+.headerRow {
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.dataRow {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.performanceList {
+  max-height: 120px; /* or whatever height you need */
+  overflow-y: auto;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.performanceList li {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  color: #003366; 
+  font-size: 0.8rem;
+}
+
+.performanceList li:nth-child(odd) {
+  background-color: #ffffff; /* Light blue */
+}
+
+.performanceList li:nth-child(even) {
+  background-color: #e6f4fd; /* White */
+}
+.leadStatusHeader {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.leadStatusList {
+  max-height: 215px; /* Fixed height */
+  overflow-y: auto;
+}
+
+.leadStatusList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.leadStatusList li:nth-child(odd) {
+  background-color: #e6f4fd;
+}
+
+.leadStatusList li:nth-child(even) {
+  background-color: white;
+}
+
+.leadStatusList li span {
+  flex: 1;
+  text-align: center;
+  font-weight: 500;
+}

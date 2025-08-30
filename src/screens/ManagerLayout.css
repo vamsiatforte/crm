@@ -3,22 +3,22 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
+  width: 100%;
+  position: fixed;
 }
 
-/* Wave behind everything */
 .svg-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 700px; /* match SVG height */
+  height: 700px; 
   z-index: -1;
   pointer-events: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-/* Optional: Give body gradient to fill gap when content scrolls */
 body {
   background: #f8f9fa;
 }
@@ -38,12 +38,14 @@ body {
 .content-wrapper {
   display: flex;
   flex-grow: 1;
-  background-color: transparent; /* allow SVG background to show */
+  background-color: transparent; 
 }
 
 .main-content {
+  width: 100%;
   flex-grow: 1;
-  padding: 1rem;
-  min-height: 100vh;
-  background-color: transparent; /* allow SVG background to show */
+  /* padding: 1rem; */
+  height: 100vh;
+  background-color: transparent; 
+  /* position: fixed; */
 }

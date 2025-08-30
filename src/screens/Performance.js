@@ -19,7 +19,7 @@ import {
 import GroupsIcon from '@mui/icons-material/Groups';
 import agentTableData from '../data/agentTableData';
 
-  const Performance = () => {
+const Performance = () => {
   const columns = [
     'agent', 'status', 'abg', 'abg.-qu.', 'h-leads', 'p-leads', 'calls', 'nue.k', 'wv', 'aktis',
     'netto', 'brutto', 'login', 'logout', 'start', 'l.akti', 'gesamt', 'calling',
@@ -38,7 +38,13 @@ import agentTableData from '../data/agentTableData';
   });
 
   return (
-    <Box sx={{ padding: 2 }}>
+    <Box
+      sx={{
+        padding: 2,
+        width: '100%', 
+        overflowX: 'auto',
+      }}
+    >
       {/* Header */}
       <Box sx={{ marginBottom: 2 }}>
         <Typography variant="h6" sx={{ color: 'white', fontSize: '2rem', mb: 0.5 }}>
@@ -80,12 +86,16 @@ import agentTableData from '../data/agentTableData';
             gap: 1,
             marginBottom: 2,
             alignItems: 'flex-end',
+            '@media (max-width: 1024px)': {
+              flexDirection: 'column',
+              alignItems: 'stretch',
+            }
           }}
         >
           {/* Benutzer */}
           <FormControl size="small" sx={{ width: 140 }}>
-            <InputLabel sx={{ fontSize: '0.65rem' }}>Benutzer</InputLabel>
-            <Select label="Benutzer" defaultValue="" sx={{ fontSize: '0.65rem', height: 28 }}>
+            <InputLabel sx={{ fontSize: '0.75rem' }}>Benutzer</InputLabel>
+            <Select label="Benutzer" defaultValue="" sx={{ fontSize: '0.75rem', height: 32 }}>
               <MenuItem value="">None</MenuItem>
               <MenuItem value="Option1">Option 1</MenuItem>
             </Select>
@@ -93,8 +103,8 @@ import agentTableData from '../data/agentTableData';
 
           {/* Projekt */}
           <FormControl size="small" sx={{ width: 100 }}>
-            <InputLabel sx={{ fontSize: '0.65rem' }}>Projekt</InputLabel>
-            <Select label="Projekt" defaultValue="" sx={{ fontSize: '0.65rem', height: 28 }}>
+            <InputLabel sx={{ fontSize: '0.75rem' }}>Projekt</InputLabel>
+            <Select label="Projekt" defaultValue="" sx={{ fontSize: '0.75rem', height: 32 }}>
               <MenuItem value="">None</MenuItem>
               <MenuItem value="Option1">Option 1</MenuItem>
             </Select>
@@ -102,8 +112,8 @@ import agentTableData from '../data/agentTableData';
 
           {/* Status */}
           <FormControl size="small" sx={{ width: 120 }}>
-            <InputLabel sx={{ fontSize: '0.65rem' }}>Status</InputLabel>
-            <Select label="Status" defaultValue="" sx={{ fontSize: '0.65rem', height: 28 }}>
+            <InputLabel sx={{ fontSize: '0.75rem' }}>Status</InputLabel>
+            <Select label="Status" defaultValue="" sx={{ fontSize: '0.75rem', height: 32 }}>
               <MenuItem value="">None</MenuItem>
               <MenuItem value="Option1">Option 1</MenuItem>
             </Select>
@@ -111,16 +121,16 @@ import agentTableData from '../data/agentTableData';
 
           {/* Zeit */}
           <FormControl size="small" sx={{ width: 80 }}>
-            <InputLabel sx={{ fontSize: '0.65rem' }}>Zeit</InputLabel>
-            <Select label="Zeit" defaultValue="" sx={{ fontSize: '0.65rem', height: 28 }}>
+            <InputLabel sx={{ fontSize: '0.75rem' }}>Zeit</InputLabel>
+            <Select label="Zeit" defaultValue="" sx={{ fontSize: '0.75rem', height: 32 }}>
               <MenuItem value="">None</MenuItem>
             </Select>
           </FormControl>
 
           {/* Datum */}
           <FormControl size="small" sx={{ width: 110 }}>
-            <InputLabel sx={{ fontSize: '0.65rem' }}>Datum</InputLabel>
-            <Select label="Datum" defaultValue="" sx={{ fontSize: '0.65rem', height: 28 }}>
+            <InputLabel sx={{ fontSize: '0.75rem' }}>Datum</InputLabel>
+            <Select label="Datum" defaultValue="" sx={{ fontSize: '0.75rem', height: 32 }}>
               <MenuItem value="">None</MenuItem>
             </Select>
           </FormControl>
@@ -130,7 +140,7 @@ import agentTableData from '../data/agentTableData';
             variant="contained"
             color="primary"
             size="small"
-            sx={{ height: 28, fontSize: '0.65rem', minWidth: '60px', ml: 0.5 }}
+            sx={{ height: 32, fontSize: '0.75rem', minWidth: '60px', ml: 0.5 }}
           >
             Filter
           </Button>
@@ -140,14 +150,14 @@ import agentTableData from '../data/agentTableData';
             variant="outlined"
             color="secondary"
             size="small"
-            sx={{ height: 28, fontSize: '0.65rem', minWidth: '60px', ml: 1 }}
+            sx={{ height: 32, fontSize: '0.75rem', minWidth: '60px', ml: 1 }}
           >
             Reset
           </Button>
 
           {/* Suchen */}
           <Box>
-            <Typography variant="caption" sx={{ display: 'block', mb: 0.3, fontSize: '0.65rem' }}>
+            <Typography variant="caption" sx={{ display: 'block', mb: 0.3, fontSize: '0.75rem' }}>
               Suchen
             </Typography>
             <TextField
@@ -155,18 +165,18 @@ import agentTableData from '../data/agentTableData';
               placeholder="Name..."
               sx={{
                 width: 130,
-                '& input': { fontSize: '0.65rem', height: '0.8rem' },
+                '& input': { fontSize: '0.75rem', height: '1.2rem' },
               }}
             />
           </Box>
 
           {/* Anzeige */}
           <Box>
-            <Typography variant="caption" sx={{ display: 'block', mb: 0.3, fontSize: '0.65rem' }}>
+            <Typography variant="caption" sx={{ display: 'block', mb: 0.3, fontSize: '0.75rem' }}>
               Anzeige
             </Typography>
             <FormControl size="small" sx={{ minWidth: 90 }}>
-              <Select defaultValue="" sx={{ fontSize: '0.65rem', height: 28 }}>
+              <Select defaultValue="" sx={{ fontSize: '0.75rem', height: 32 }}>
                 <MenuItem value="">0</MenuItem>
                 <MenuItem value="Zelian">Zelian</MenuItem>
                 <MenuItem value="Alle">Alle</MenuItem>
@@ -177,7 +187,7 @@ import agentTableData from '../data/agentTableData';
 
         {/* Table */}
         <TableContainer component={Paper} sx={{ overflowX: 'auto' }}>
-          <Table sx={{ minWidth: 1100 }}>
+          <Table sx={{ minWidth: 1000, tableLayout: 'auto' }}>
             <TableHead>
               <TableRow sx={{ backgroundColor: 'white' }}>
                 {columns.map((col) => (
@@ -185,7 +195,7 @@ import agentTableData from '../data/agentTableData';
                     key={col}
                     sx={{
                       whiteSpace: 'nowrap',
-                      fontSize: '0.65rem',
+                      fontSize: '0.75rem',
                       paddingY: '6px',
                       paddingX: '4px',
                       fontWeight: 600,
@@ -210,8 +220,8 @@ import agentTableData from '../data/agentTableData';
                       key={col}
                       sx={{
                         whiteSpace: 'nowrap',
-                        fontSize: '0.82rem',
-                        paddingY: '14px',
+                        fontSize: '0.75rem',
+                        paddingY: '12px',
                         paddingX: '4px',
                         color: '#000',
                       }}
