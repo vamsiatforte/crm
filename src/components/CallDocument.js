@@ -3,16 +3,8 @@ import styles from './CallDocument.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import up from '../images/button_handset_up.svg';
-import down from '../images/button_handset_down.svg';
-import callHistory from '../images/button_callhistory_presets.svg';
-
 const CallDocument = () => {
     const [visible, setVisible] = useState(true);
-    // Mock backend data - replace with actual API call
-    const [callHistoryData] = useState([
-       
-    ]);
 
     if (!visible) return null;
 
@@ -138,32 +130,19 @@ const CallDocument = () => {
                 </div>
             </div>
 
-            <div className='row mt-2'>
+            <div className='row mt-1'>
                 <div className='col-12'>
                     <div className={`container-fluid ${styles.container} p-0`}>
                         <h6 className="">Call History</h6>
                         
                         {/* Call History Display */}
                         <div className={styles.callHistoryContainer}>
-                            {callHistoryData.length > 0 ? (
-                                <div className={styles.callHistoryContent}>
-                                    {callHistoryData.map((entry, index) => (
-                                        <div key={index} className={styles.callHistoryEntry}>
-                                            <span className={styles.callDate}>{entry.date}</span>
-                                            <strong className={styles.callUser}>{entry.user}</strong>
-                                            <span className={styles.callMessage}>: {entry.message}</span>
-                                            <br />
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : (
-                                <div className={styles.noDataMessage}>
-                                    No data available
-                                </div>
-                            )}
+                            <div className={styles.noDataMessage}>
+                                <p>No data available</p>
+                            </div>
                         </div>
                         
-                        {/* Just Call History Button */}
+                        {/* Call History Button */}
                         <div className={styles.buttonContainer}>
                             <button className={`btn ${styles.callHistoryBtn}`}>
                                 Call history
@@ -171,7 +150,6 @@ const CallDocument = () => {
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     );

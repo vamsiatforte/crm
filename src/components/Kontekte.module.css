@@ -219,8 +219,8 @@
   border-radius: 6px;
   padding: 4px 20px;
   border: none;
-  background: #d3d3d3;
-  color: #333;
+  background: skyblue;
+  color: white;
 }
 .modalField input{
     border: 2px solid rgb(241, 231, 231);

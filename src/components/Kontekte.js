@@ -257,7 +257,7 @@ const Kontakte = ({ onContactSelect, selectedIndex }) => {
                         </p>
                     </div>
 
-                    {/* Modal for new contact */}
+              
                     {/* Modal for new contact */}
                     {showForm && (
                         <div className={styles.modalOverlay}>
@@ -363,7 +363,7 @@ const Kontakte = ({ onContactSelect, selectedIndex }) => {
                                             className={`btn btn-secondary ${styles.cancelButton}`}
                                             onClick={() => setShowForm(false)}
                                         >
-                                            Abbrechen
+                                            save
                                         </button>
                                     </div>
                                 </form>
