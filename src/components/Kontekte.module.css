@@ -1,8 +1,8 @@
 .kontakteContainer {
     font-size: 12px;
     background-color: white;
-    height: 58vh;
-    padding-left: 20px;
+    height: 60vh;
+    padding-left: 0px;
     width: 100% !important;
 }
 
@@ -18,6 +18,7 @@
     padding: 8px 0;
     border-top: 1px solid #dee2e6;
     font-size: 0.75rem;
+    width: 103%;
 }
 
 .activeRow {
@@ -25,7 +26,7 @@
     color: white;
 }
 
-.activeRow .contactName,
+.activeRow ,
 .activeRow .contactPosition,
 .activeRow .leadStatus,
 .activeRow .contactDate {
@@ -59,6 +60,7 @@
     border-color: #1e2b3e;
 }
 
+
 .checkboxInput:checked::after {
     content: '';
     position: absolute;
@@ -76,6 +78,7 @@
     font-size: 0.75rem;
     font-weight: 500;
     margin-bottom: 2px;
+    color: rgb(6, 179, 247);
 }
 
 .contactPosition {
@@ -106,8 +109,10 @@
 }
 
 /* Form styles */
+
 .contactDetailRow {
-    background-color: #fff;
+    padding-left: 10px;
+    background-color: rgb(242, 239, 239);
     border-bottom: 1px solid #ccc;
 }
 
@@ -155,4 +160,115 @@
     border: none;
     border-bottom: 2px solid black;
     border-radius: 0px;
+}
+.activeRow .editButton svg,
+.activeRow .tagButton svg {
+    color: white !important;
+}
+.contactDiv{
+    border-left: 2px solid skyblue;
+    padding-left: 11px;
+}
+.navDiv{
+    border-bottom: 1px solid black;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active  {
+    border-top: 2px solid skyblue !important;
+    color: var(--bs-nav-tabs-link-active-color) !important;
+    /* background-color: var(--bs-nav-tabs-link-active-bg); */
+    /* border-color: var(--bs-nav-tabs-link-active-border-color); */
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.15);
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  padding: 20px;
+  min-width: 350px;
+  max-width: 550px;
+  width: 100%;
+  height: 85vh;
+  overflow: scroll;
+}
+
+.modalField {
+  margin-bottom: 18px !important;
+  font-size: 1px;
+}
+
+.modalButtons {
+  text-align: right;
+  margin-top: 18px;
+}
+
+.cancelButton {
+  border-radius: 6px;
+  padding: 4px 20px;
+  border: none;
+  background: #d3d3d3;
+  color: #333;
+}
+.modalField input{
+    border: 2px solid rgb(241, 231, 231);
+    padding: 5px;
+}
+.formTitle{
+    font-size: 1rem;
+    font-weight: bold;
+}
+/* Modal Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Form Title */
+.formTitle {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Close Button */
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.formText{
+    margin-top: 20px;
+    font-size: 1rem;
 }

@@ -87,13 +87,13 @@ const LeadChart = () => {
       .data(data)
       .enter()
       .append("rect")
-      .attr("x", (d) => x(d.month) + x.bandwidth() * 0.25) // center narrow bar
+      .attr("x", (d) => x(d.month) + x.bandwidth() * 0.25) 
       .attr("y", (d) => y(d.pipeline))
-      .attr("width", x.bandwidth() * 0.5) // narrower width
+      .attr("width", x.bandwidth() * 0.5) 
       .attr("height", (d) => height - y(d.pipeline))
       .attr("fill", "#1f77b4");
 
-    // Line generator
+   
     const line = d3
       .line()
       .x((d) => x(d.month) + x.bandwidth() / 2)

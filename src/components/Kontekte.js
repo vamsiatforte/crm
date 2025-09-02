@@ -1,147 +1,386 @@
-import { FaStar, FaPencilAlt, FaTag } from 'react-icons/fa';
+
 import { useState } from 'react';
+import { TextField, Select, MenuItem, InputLabel, FormControl, Checkbox, FormControlLabel } from '@mui/material';
 import styles from './Kontekte.module.css';
 import up from '../images/button_handset_up.svg';
 import down from '../images/button_handset_down.svg';
+import { FaStar, FaPencilAlt, FaTag, FaPlus, FaTimes } from 'react-icons/fa';
+
 
 const Kontakte = ({ onContactSelect, selectedIndex }) => {
+    const [activeTab, setActiveTab] = useState('kontakte');
+    const [showForm, setShowForm] = useState(false);
+
     const toggleOpen = (index) => {
         onContactSelect(selectedIndex === index ? null : index);
     };
 
     return (
-        <div className={`col-12  ${styles.kontakteContainer}`}>
-            {/* Header */}
-            <div className="row align-items-center mb-3">
-                <div className="col-10">
-                    <div className="d-flex align-items-center">
-                        <div className={`${styles.kontakteHeader} border-top border-dark pt-2 me-3`}>
-                            <p className="mb-0">Kontakte</p>
+        <div className={`col-12 ${styles.kontakteContainer}`}>
+            {/* Tab Navigation */}
+            <ul className={`nav nav-tabs mb-3 ${styles.navDiv}`}>
+                <li className="nav-item">
+                    <button
+                        className={`nav-link ${activeTab === 'kontakte' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('kontakte')}
+                        type="button"
+                    >
+                        Kontakte
+                    </button>
+                </li>
+                <li className="nav-item">
+                    <button
+                        className={`nav-link ${activeTab === 'favorites' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('favorites')}
+                        type="button"
+                    >
+                        <FaStar className={`me-1 ${styles.starIcon}`} /> Favorites
+                    </button>
+                </li>
+            </ul>
+
+            {/* Kontakte Tab Content */}
+            {activeTab === 'kontakte' && (
+                <>
+                    <div className={`d-flex justify-content-around ${styles.tableHeader}`}>
+                        <div className="d-flex justify-content-start"><p className="fw-bold">Ansprechpartner/Funktion</p></div>
+                        <div><p className="fw-bold">Lead/WVL</p></div>
+                        <div><p className="fw-bold">Telefon/Mobil</p></div>
+                        <div><p className="fw-bold">Aktion</p></div>
+                    </div>
+
+                    {/* Contact Entry 1 */}
+                    <div style={{ width: '97%' }}>
+                        <div
+                            className={`d-flex justify-content-between  ${styles.contactRow} ${selectedIndex === 0 ? styles.activeRow : ''}`}
+                            onClick={() => toggleOpen(0)}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <div>
+                                <div className={`d-flex flex-column ${styles.contactDiv}`}>
+                                    <p className={styles.contactName}>Daniel Stoffel</p>
+                                    <p className={styles.contactPosition}>Teamleiter Instandhaltung /</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="d-flex flex-column">
+                                    <p className={styles.leadStatus}>C</p>
+                                    <p className={styles.contactDate}>17/04/2025</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div className={`form-check ${styles.phoneCheckbox}`}>
+                                    <input type="checkbox" className={`form-check-input ${styles.checkboxInput}`} />
+                                </div>
+                            </div>
+                            <div>
+                                <div className="d-flex">
+                                    <button className={`btn btn-sm ${styles.editButton}`}><FaPencilAlt /></button>
+                                    <button className={`btn btn-sm ${styles.tagButton} `}><FaTag /></button>
+                                </div>
+                            </div>
                         </div>
-                        <p className={`mb-0 d-flex align-items-center ${styles.favoritesText}`}>
-                            <FaStar className={`me-1 ${styles.starIcon}`} /> Favorites
+
+                        {/* Expanded Material UI Form */}
+                        {selectedIndex === 0 && (
+                            <div className={`row ${styles.contactDetailRow} `}>
+                                <div className="col-12 px-3 py-3">
+                                    <div className="row mb-3">
+                                        <div className="col-4">
+                                            <TextField
+                                                label="Email Adresse"
+                                                type="email"
+                                                variant="standard"
+                                                size="small"
+                                                fullWidth
+                                                InputLabelProps={{ shrink: true }}
+                                                sx={{
+                                                    background: 'transparent',
+                                                    fontSize: '0.7rem',
+                                                    '& .MuiInputBase-input': {
+                                                        padding: '2px 0 2px 0',
+                                                        fontSize: '0.75rem',
+                                                        height: '1.48em'
+                                                    },
+                                                    '& .MuiInputLabel-root': {
+                                                        fontSize: '0.72rem'
+                                                    },
+                                                    '& .MuiInput-underline:before': {
+                                                        borderBottom: '1px solid #999',
+                                                    },
+                                                    '& .MuiInput-underline:after': {
+                                                        borderBottom: '2px solid black',
+                                                    },
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="col-4">
+                                            <TextField
+                                                label="Funktionsbezeichnung"
+                                                type="text"
+                                                variant="standard"
+                                                size="small"
+                                                fullWidth
+                                                InputLabelProps={{ shrink: true }}
+                                                sx={{
+                                                    background: 'transparent',
+                                                    fontSize: '0.7rem',
+                                                    '& .MuiInputBase-input': {
+                                                        padding: '2px 0 2px 0',
+                                                        fontSize: '0.75rem',
+                                                        height: '1.48em'
+                                                    },
+                                                    '& .MuiInputLabel-root': {
+                                                        fontSize: '0.72rem'
+                                                    },
+                                                    '& .MuiInput-underline:before': {
+                                                        borderBottom: '1px solid #999',
+                                                    },
+                                                    '& .MuiInput-underline:after': {
+                                                        borderBottom: '2px solid black',
+                                                    },
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="col-4">
+                                            <FormControl variant="standard" size="small" fullWidth
+                                                sx={{
+                                                    background: "transparent",
+                                                    '& .MuiInputBase-input': { padding: '2px 0 2px 0', fontSize: '0.75rem', height: '1.48em' },
+                                                    '& .MuiInputLabel-root': { fontSize: '0.72rem' },
+                                                    '& .MuiSelect-select': { padding: '2px 26px 2px 0', fontSize: '0.75rem', minHeight: '1.48em' }
+                                                }}>
+                                                <InputLabel shrink>Rolle des AP</InputLabel>
+                                                <Select
+                                                    defaultValue=""
+                                                    label="Rolle des AP"
+                                                    size="small"
+                                                >
+                                                    <MenuItem value="">------</MenuItem>
+                                                    <MenuItem value="One">One</MenuItem>
+                                                    <MenuItem value="Two">Two</MenuItem>
+                                                    <MenuItem value="Three">Three</MenuItem>
+                                                </Select>
+                                            </FormControl>
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="col-4 d-flex align-items-center">
+                                            <FormControlLabel
+                                                control={
+                                                    <Checkbox
+                                                        size="small"
+                                                        sx={{
+                                                            '&.Mui-checked': { color: '#1e2b3e', },
+                                                            padding: '0 8px 0 0',
+                                                        }}
+                                                    />
+                                                }
+                                                label="Info Versand-Anforderung"
+                                                sx={{
+                                                    '& .MuiFormControlLabel-label': { fontSize: '0.5rem', color: '#333' }
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="col-4">
+                                            <TextField
+                                                label="Versand-Paket"
+                                                type="text"
+                                                variant="standard"
+                                                size="small"
+                                                fullWidth
+                                                InputLabelProps={{ shrink: true }}
+                                                sx={{
+                                                    background: 'transparent',
+                                                    fontSize: '0.7rem',
+                                                    '& .MuiInputBase-input': {
+                                                        padding: '2px 0 2px 0',
+                                                        fontSize: '0.75rem',
+                                                        height: '1.48em'
+                                                    },
+                                                    '& .MuiInputLabel-root': {
+                                                        fontSize: '0.72rem'
+                                                    },
+                                                    '& .MuiInput-underline:before': {
+                                                        borderBottom: '1px solid #999',
+                                                    },
+                                                    '& .MuiInput-underline:after': {
+                                                        borderBottom: '2px solid black',
+                                                    },
+                                                }}
+                                            />
+                                        </div>
+                                        <div className="col-4">
+                                            <TextField
+                                                label="Versanddatum"
+                                                type="date"
+                                                variant="standard"
+                                                size="small"
+                                                fullWidth
+                                                InputLabelProps={{ shrink: true }}
+                                                sx={{
+                                                    background: 'transparent',
+                                                    fontSize: '0.7rem',
+                                                    '& .MuiInputBase-input': {
+                                                        padding: '2px 0 2px 0',
+                                                        fontSize: '0.75rem',
+                                                        height: '1.48em'
+                                                    },
+                                                    '& .MuiInputLabel-root': {
+                                                        fontSize: '0.72rem'
+                                                    },
+                                                    '& .MuiInput-underline:before': {
+                                                        borderBottom: '1px solid #999',
+                                                    },
+                                                    '& .MuiInput-underline:after': {
+                                                        borderBottom: '2px solid black',
+                                                    },
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Plus Icon row */}
+                    <div className='d-flex justify-content-end'>
+                        <p
+                            onClick={() => setShowForm(true)}
+                            className={`${styles.formText}`}
+                        >
+                            Neuen Ansprechpartner anlegen{' '}
+                            <span>
+                                <FaPlus color='skyblue' />
+                            </span>
                         </p>
                     </div>
-                </div>
-                <div className="col-2">
-                    <div style={{ gap: '10px' }} className="d-flex justify-content-end pt-1 pe-1">
-                        <img src={up} alt="Up" className={`img-fluid ${styles.controlButton}`} />
-                        <img src={down} alt="Down" className={`img-fluid ${styles.controlButton} ms-1`} />
-                    </div>
-                </div>
-            </div>
 
-            {/* Table Header */}
-            <div className={`row ${styles.tableHeader}`}>
-                <div className="col-5"><p className="fw-bold">Ansprechpartner/Funktion</p></div>
-                <div className="col-2"><p className="fw-bold">Lead/WVL</p></div>
-                <div className="col-2"><p className="fw-bold">Telefon/Mobil</p></div>
-                <div className="col-3"><p className="fw-bold">Aktion</p></div>
-            </div>
+                    {/* Modal for new contact */}
+                    {/* Modal for new contact */}
+                    {showForm && (
+                        <div className={styles.modalOverlay}>
+                            <div className={styles.modal}>
+                                <form>
+                                    {/* Modal Header with Title and Close Button */}
+                                    <div className={styles.modalHeader}>
+                                        <p className={styles.formTitle}>Neuen Ansprechpartner anlegen</p>
+                                        <button
+                                            type="button"
+                                            className={styles.closeButton}
+                                            onClick={() => setShowForm(false)}
+                                            aria-label="Close"
+                                        >
+                                            <FaTimes />
+                                        </button>
+                                    </div>
 
-            {/* Contact Entry 1 */}
-            <div style={{width:'97%',paddingLeft:'20px'}}>
-                <div
-                    className={`row ${styles.contactRow} ${selectedIndex === 0 ? styles.activeRow : ''}`}
-                    onClick={() => toggleOpen(0)}
-                    style={{ cursor: 'pointer' }}
-                >
-                    <div className="col-5">
-                        <div className="d-flex flex-column">
-                            <p className={styles.contactName}>Daniel Stoffel</p>
-                            <p className={styles.contactPosition}>Teamleiter Instandhaltung /</p>
-                        </div>
-                    </div>
-                    <div className="col-2">
-                        <div className="d-flex flex-column">
-                            <p className={styles.leadStatus}>C</p>
-                            <p className={styles.contactDate}>17/04/2025</p>
-                        </div>
-                    </div>
-                    <div className="col-2">
-                        <div className={`form-check ${styles.phoneCheckbox}`}>
-                            <input type="checkbox" className={`form-check-input ${styles.checkboxInput}`} />
-                        </div>
-                    </div>
-                    <div className="col-3">
-                        <div className="d-flex">
-                            <button className={`btn btn-sm ${styles.editButton}`}><FaPencilAlt /></button>
-                            <button className={`btn btn-sm ${styles.tagButton} ms-1`}><FaTag /></button>
-                        </div>
-                    </div>
-                </div>
-
-                {selectedIndex === 0 && (
-                    <div className={`row ${styles.contactDetailRow}`}>
-                        <div className="col-12 px-3 py-3">
-                            <div className="row mb-3">
-                                <div className="col-4">
-                                    <label className="form-label">Email Adresse</label>
-                                    <input type="email" className={`form-control ${styles.input1}`} />
-                                </div>
-                                <div className="col-4">
-                                    <label className="form-label">Funktionsbezeichnung</label>
-                                    <input type="text" className={`form-control ${styles.input1}`}/>
-                                </div>
-                                <div className="col-4">
-                                    <label className="form-label">Rolle des AP</label>
-                                    <select className={`form-select ${styles.input1}`}>
-                                        <option>------</option>
-                                        <option>One</option>
-                                        <option>Two</option>
-                                        <option>Three</option>
-                                    </select>
-                                </div>
+                                    {/* Form Fields */}
+                                    <TextField
+                                        fullWidth
+                                        label="Anrede"
+                                        variant="standard"
+                                        placeholder="Anrede"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Name"
+                                        variant="standard"
+                                        placeholder="Name"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Email"
+                                        variant="standard"
+                                        placeholder="Email"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Telefonnummer"
+                                        variant="standard"
+                                        placeholder="Telefonnummer"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Adresse"
+                                        variant="standard"
+                                        placeholder="Adresse"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Geburtsdatum"
+                                        variant="standard"
+                                        placeholder="Geburtsdatum"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Firma"
+                                        variant="standard"
+                                        placeholder="Firma"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Position"
+                                        variant="standard"
+                                        placeholder="Position"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Notizen"
+                                        variant="standard"
+                                        placeholder="Notizen"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        label="Webseite"
+                                        variant="standard"
+                                        placeholder="Webseite"
+                                        InputLabelProps={{ shrink: true }}
+                                        className={styles.modalField}
+                                    />
+                                    <div className={styles.modalButtons}>
+                                        <button
+                                            type="button"
+                                            className={`btn btn-secondary ${styles.cancelButton}`}
+                                            onClick={() => setShowForm(false)}
+                                        >
+                                            Abbrechen
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
-                            <div className="row">
-                                <div className="col-4 d-flex align-items-center">
-                                    <input type="checkbox" id="infoCheck" className="form-check-input me-2" />
-                                    <label htmlFor="infoCheck" className="form-check-label">Info Versand-Anforderung</label>
-                                </div>
-                                <div className="col-4">
-                                    <label className="form-label">Versand-Paket</label>
-                                    <input type="text"className={`form-control ${styles.input1}`} />
-                                </div>
-                                <div className="col-4">
-                                    <label className="form-label">Versanddatum</label>
-                                    <input type="date"className={`form-control ${styles.input1}`} />
-                                </div>
-                            </div>
                         </div>
-                    </div>
-                )}
-            </div>
+                    )}
 
-            {/* Contact Entry 2 */}
-            <div
-                className={`row ${styles.contactRow} ${selectedIndex === 1 ? styles.activeRow : ''}`}
-                onClick={() => toggleOpen(1)}
-                style={{ cursor: 'pointer' }}
-            >
-                <div className="col-5">
-                    <div className="d-flex flex-column">
-                        <p className={styles.contactName} style={{ color: '#007bff' }}>Zentrale</p>
-                        <p className={styles.contactPosition}>/</p>
-                    </div>
+
+                </>
+            )}
+
+            {/* Favorites Tab Content */}
+            {activeTab === 'favorites' && (
+                <div style={{ minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+
                 </div>
-                <div className="col-2">
-                    <div className="d-flex flex-column">
-                        <p className={styles.leadStatus}></p>
-                        <p className={styles.contactDate}>21/05/2024</p>
-                    </div>
-                </div>
-                <div className="col-2">
-                    <div className={`form-check ${styles.phoneCheckbox}`}>
-                        <input type="checkbox" className={`form-check-input ${styles.checkboxInput}`} />
-                    </div>
-                </div>
-                <div className="col-3">
-                    <div className="d-flex">
-                        <button className={`btn btn-sm ${styles.editButton}`}><FaPencilAlt /></button>
-                        <button className={`btn btn-sm ${styles.tagButton} ms-1`}><FaTag /></button>
-                    </div>
-                </div>
-            </div>
+            )}
         </div>
     );
 };

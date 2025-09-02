@@ -31,7 +31,7 @@ const CompaniesInformation = () => {
 
                     <div className='p-2'>
                         {/* Main Sections */}
-                    <div className="row mt-3">
+                    <div className="row mt-2">
                         <Unternehmensinformation />
                         <Zusatzinformationen />
                         <Administratives />
@@ -39,7 +39,7 @@ const CompaniesInformation = () => {
 
                     {/* Kontakte and Right Panel */}
                     <div className="row ">
-                        <div className="col-4 ps-0">
+                        <div className="col-4 p-0">
                             <Kontakte selectedIndex={selectedIndex} onContactSelect={setSelectedIndex} />
                         </div>
                         <div className="col-8">

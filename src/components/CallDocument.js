@@ -9,11 +9,10 @@ import callHistory from '../images/button_callhistory_presets.svg';
 
 const CallDocument = () => {
     const [visible, setVisible] = useState(true);
-    const [content] = useState(
-        `03.05.2023 14:54:14 <strong style="color:blue">Ajla Vejo</strong> : Herr Stoffel wurde erreicht. Ich konnte mein Thema vorstellen und er war auch interessiert. Ich soll mich bis Ende Mai nochmal melden, da gerade ein Projekt ansteht.<br>
-23.05.2023 09:52:44 <strong style="color:blue">Ajla Vejo</strong> : FZ/AB<br>
-24.05.2023 11:08:37 <strong style="color:blue">Ajla Vejo</strong> : FZ/AB`
-    );
+    // Mock backend data - replace with actual API call
+    const [callHistoryData] = useState([
+       
+    ]);
 
     if (!visible) return null;
 
@@ -34,7 +33,6 @@ const CallDocument = () => {
                             Wenn "ja" mit welchen
                         </p>
                         <p className={`w-100 ${styles.borderPurpose1}`}></p>
-
                     </div>
 
                     <div className="col-12 mt-2">
@@ -60,7 +58,6 @@ const CallDocument = () => {
                             Wenn "ja" mit welchen
                         </p>
                         <p className={`w-100 ${styles.borderPurpose1}`}></p>
-
                     </div>
 
                     <div className="col-12">
@@ -128,7 +125,6 @@ const CallDocument = () => {
                             <button className={`btn btn-secondary btn-sm w-100 mt-2 ${styles.notizBtn}`}>Notiz(Kundensetig)</button>
                             <p className='m-0 my-2'>Zur Blacklist</p>
                         </div>
-
                     </div>
 
                     <div className="row">
@@ -143,43 +139,39 @@ const CallDocument = () => {
             </div>
 
             <div className='row mt-2'>
-                <div className='col-11'>
+                <div className='col-12'>
                     <div className={`container-fluid ${styles.container} p-0`}>
                         <h6 className="">Call History</h6>
-                        <p className="m-0">Neuer Eintrag in die Call History</p>
-
-                        {/* Toolbar */}
-                        <div className={styles.toolbar}>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-arrow-counterclockwise"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-arrow-clockwise"></i></button>
-                            <div className={styles.vr}></div>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-type-bold"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-type-italic"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-type-underline"></i></button>
-                            <div className={styles.vr}></div>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-text-left"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-text-center"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-text-right"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-justify"></i></button>
-                            <div className={styles.vr}></div>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-outdent"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-indent"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-list-ul"></i></button>
-                            <button className="btn btn-sm btn-light border"><i className="bi bi-list-ol"></i></button>
+                        
+                        {/* Call History Display */}
+                        <div className={styles.callHistoryContainer}>
+                            {callHistoryData.length > 0 ? (
+                                <div className={styles.callHistoryContent}>
+                                    {callHistoryData.map((entry, index) => (
+                                        <div key={index} className={styles.callHistoryEntry}>
+                                            <span className={styles.callDate}>{entry.date}</span>
+                                            <strong className={styles.callUser}>{entry.user}</strong>
+                                            <span className={styles.callMessage}>: {entry.message}</span>
+                                            <br />
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className={styles.noDataMessage}>
+                                    No data available
+                                </div>
+                            )}
                         </div>
-
-                        {/* Static Editor Area */}
-                        <div className={styles.editorContainer} dangerouslySetInnerHTML={{ __html: content }}></div>
+                        
+                        {/* Just Call History Button */}
+                        <div className={styles.buttonContainer}>
+                            <button className={`btn ${styles.callHistoryBtn}`}>
+                                Call history
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className='col-1'>
-                    <div className='d-flex flex-column mt-5'>
-                        <img width={'100%'} src={callHistory} />
-                        <img src={up} />
-                        <img src={down} />
-                    </div>
-                </div>
-
+                
             </div>
         </div>
     );

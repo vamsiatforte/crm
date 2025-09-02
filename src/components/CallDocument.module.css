@@ -1,7 +1,7 @@
 .wrapper {
   font-size: 0.7rem;
   margin: 0 !important;
-  padding: 10px !important;
+  /* padding: 10px !important; */
   background-color: white;
 }
 .callText{
@@ -132,4 +132,63 @@
 .editorContainer{
   height: 65px;
   overflow: scroll;
+}
+.callHistoryContainer {
+    border: 2px solid #17a2b8;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    margin-top: 10px;
+    min-height: 80px;
+    overflow-y: auto;
+    max-height: 80px;
+}
+
+.callHistoryContent {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.callHistoryEntry {
+    margin-bottom: 8px;
+}
+
+.callDate {
+    color: #333;
+    font-weight: normal;
+}
+
+.callUser {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.callMessage {
+    color: #333;
+}
+
+.noDataMessage {
+    color: #6c757d;
+    font-style: italic;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.buttonContainer {
+    display: flex;
+    margin-top: 15px;
+}
+
+.callHistoryBtn {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.callHistoryBtn:hover {
+    background-color: #138496;
+    color: white;
 }

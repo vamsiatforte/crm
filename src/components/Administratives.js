@@ -2,12 +2,19 @@ import styles from './Administratives.module.css';
 import DatePicker from 'react-datepicker';
 import { useState } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
-import NoteModal from './NoteModel';
+import { FaTimes } from 'react-icons/fa';
 
 const Administratives = () => {
     const [wiedervorlageDate, setWiedervorlageDate] = useState(new Date('2024-05-21'));
     const [showNoteModal, setShowNoteModal] = useState(false);
+    const [showCustomerNoteModal, setShowCustomerNoteModal] = useState(false); // New state
     const [color, setColor] = useState("#9AA6B2");
+    const [noteContent, setNoteContent] = useState('');
+
+    const handleSaveNote = () => {
+        // Handle save logic here
+        setShowNoteModal(false);
+    };
 
     return (
         <div className={`col-3  ${styles.admin}`}>
@@ -38,10 +45,10 @@ const Administratives = () => {
                         <div className={`col-12 mb-3 ${styles.selectBottomBorder}`}></div>
 
                         <div className='row align-items-center mb-2'>
-                            <div className='col-9'>
+                            <div className='col-8 pe-0'>
                                 <p className={`mb-0 ${styles.smallText}`}>Is Lead Transferred?</p>
                             </div>
-                            <div className='col-3'>
+                            <div className='col-4'>
                                 <div className={styles.selectWrapper}>
                                     <select className={styles.selectBottomBorder}>
                                         <option>No</option>
@@ -69,11 +76,10 @@ const Administratives = () => {
                                     <option>Option 2</option>
                                 </select>
                             </div>
-
                         </div>
                     </div>
 
-                    {/* Right Column - Only modified this section */}
+                    {/* Right Column */}
                     <div className='col-6 ps-3'>
                         <div className='mb-2'>
                             <div className='row'>
@@ -81,7 +87,6 @@ const Administratives = () => {
                             </div>
                             <div className='row mb-3'>
                                 <div className='col-7'>
-
                                     <div className={`d-flex align-items-center ${styles.datePickerContainer} text-white`}>
                                         <DatePicker
                                             selected={wiedervorlageDate}
@@ -125,7 +130,12 @@ const Administratives = () => {
                                 </button>
                             </div>
                             <div className='col-6'>
-                                <button className={`btn btn-sm btn-info w-100 ${styles.smallButton}`}>Notiz-Kunde</button>
+                                <button 
+                                    className={`btn btn-sm btn-info w-100 ${styles.smallButton}`}
+                                    onClick={() => setShowCustomerNoteModal(true)} // Added click handler
+                                >
+                                    Notiz-Kunde
+                                </button>
                             </div>
                         </div>
 
@@ -139,6 +149,74 @@ const Administratives = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Internal Note Modal */}
+            {showNoteModal && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.noteModal}>
+                        <div className={styles.modalHeader}>
+                            <h3 className={styles.modalTitle}>Edit Your Note</h3>
+                            <button
+                                type="button"
+                                className={styles.closeButton}
+                                onClick={() => setShowNoteModal(false)}
+                            >
+                                <FaTimes />
+                            </button>
+                        </div>
+                        <div className={styles.modalBody}>
+                            <textarea
+                                className={styles.noteTextarea}
+                                value={noteContent}
+                                onChange={(e) => setNoteContent(e.target.value)}
+                                placeholder="Enter your note here..."
+                                rows={10}
+                            />
+                        </div>
+                        <div className={styles.modalFooter}>
+                            <button
+                                type="button"
+                                className={styles.saveButton}
+                                onClick={handleSaveNote}
+                            >
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Customer Note Modal */}
+            {showCustomerNoteModal && (
+                <div className={styles.modalOverlay}>
+                    <div className={styles.customerNoteModal}>
+                        <div className={styles.modalHeader}>
+                            <h3 className={styles.modalTitle}>Customer Note</h3>
+                            <button
+                                type="button"
+                                className={styles.closeButton}
+                                onClick={() => setShowCustomerNoteModal(false)}
+                            >
+                                <FaTimes />
+                            </button>
+                        </div>
+                        <div className={styles.modalBody}>
+                            <p className={styles.customerNoteText}>
+                                This is a non-editable note for the customer.
+                            </p>
+                        </div>
+                        <div className={styles.modalFooter}>
+                            <button
+                                type="button"
+                                className={styles.closeButtonBottom}
+                                onClick={() => setShowCustomerNoteModal(false)}
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

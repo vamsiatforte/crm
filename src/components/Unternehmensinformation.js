@@ -12,30 +12,32 @@ const Unternehmensinformation = () => {
     return (
         <div className={`col-4 ${styles.Unternehmensinformation}`}>
            
-            <div className='row mb-3'>
+            <div className='d-flex mb-3'>
                 {/* First Row with spacing */}
                 <div className={`col-9 bg-white ${styles.unteDiv}`}>
-                     <p className='fw-bold mb-0'>Unternehmensinformation</p>
+                     <p className='fw-bold mb-0 mt-1'>Unternehmensinformation</p>
 
-                    <div className="row d-flex justify-content-between">
-                        <div className={`col-8 ${styles.dataDiv}`}>
+                   
+                    <div className="d-flex justify-content-between">
+                        <div className={`${styles.dataDiv}`}>
                             <p className={styles.label}>Firma</p>
                             <p className={styles.data}>Lanza Cologne AG</p>
                         </div>
-                        <div className={`col-4 ${styles.dataDiv}`}>
+                        <div className={` ${styles.dataDiv}`}>
                             <p className={styles.label}>SPC-ID</p>
                             <p className={styles.data}>1</p>
                         </div>
                     </div>
 
                     {/* Second Row with spacing */}
-                    <div className="row d-flex justify-content-between mt-2">
-                        <div className={`col-4 ${styles.dataDiv}`}>
+                   
+                    <div className="d-flex justify-content-between mt-2">
+                        <div className={`${styles.dataDiv}`}>
                             <p className={styles.label}>Straße</p>
                             <p className={styles.data}>Nattermannallee</p>
                         </div>
 
-                        <div className={`col-4 ${styles.dataDiv} d-flex justify-content-between`}>
+                        <div className={`${styles.dataDiv} d-flex justify-content-between`}>
                             <div className="me-2 w-50">
                                 <p className={styles.label}>Nr.</p>
                                 <p className={styles.data}>1</p>
@@ -46,32 +48,31 @@ const Unternehmensinformation = () => {
                             </div>
                         </div>
 
-                        <div className={`col-3 ${styles.dataDiv}`}>
+                        <div className={` ${styles.dataDiv}`}>
                             <p className={styles.label}>Ort</p>
                             <p className={styles.data}>Köln</p>
                         </div>
-                        <div className={`col-1 ${styles.dataDiv}`}>
+                        <div className={` ${styles.dataDiv}`}>
                             <p className={styles.label}>Land</p>
                             <p className={styles.data}>DE</p>
                         </div>
                     </div>
                     {/* third row */}
-                    <div className='row d-flex justify-content-between mt-2'>
-                        <div className={`col-5 ${styles.dataDiv}`}>
+                   
+                    <div className='d-flex justify-content-between mt-2'>
+                        <div className={` ${styles.dataDiv}`}>
                             <p className={styles.label}>HomePage</p>
                             <p className={styles.data}>www.lonzabio.com</p>
                         </div>
-                        <div className={`col-2 ${styles.dataDiv}`}>
-                            <img width={'40px'} height={'40px'} src={buttonVisit} />
-                        </div>
-                        <div className={`col-5 ${styles.dataDiv}`}>
+                        <div><img width={'40px'} height={'20px'} src={buttonVisit} /></div>
+                        <div className={`${styles.dataDiv}`}>
                             <p className={styles.label}>telefon</p>
                             <p className={styles.data}>+49 22 1991990</p>
                         </div>
 
                     </div>
                 </div>
-                <div className={`col-3 ${styles.firma} p-2 pb-3`}>
+                <div className={`col-3 ${styles.firma} p-2 `}>
                     <div className='col-12'>
                         <p className={styles.firmaText}>Firma (be)Suchen</p>
                     </div>
@@ -128,7 +129,7 @@ const Unternehmensinformation = () => {
                 </div>
 
             </div>
-            <div className={`row ${styles.downDiv} py-2 gap-2`}>
+            {/* <div className={`row ${styles.downDiv} py-2 gap-2`}>
                 <div className={`col-4 ${styles.down}`}>
                     <p>Trance</p>
 
@@ -137,6 +138,18 @@ const Unternehmensinformation = () => {
                     <p>Prioritat/Zusatz</p>
                 </div>
                 <div className={`col-5 ${styles.down}`}>
+                    <p>Account-Manager Kundenseitig</p>
+                </div>
+            </div> */}
+            <div className={`d-flex justify-content-between ${styles.downDiv} py-2 gap-2`}>
+                <div className={` ${styles.down}`}>
+                    <p>Trance</p>
+
+                </div>
+                <div className={`${styles.down}`} style={{width:'57%'}}>
+                    <p>Prioritat/Zusatz</p>
+                </div>
+                <div className={` ${styles.down}`}>
                     <p>Account-Manager Kundenseitig</p>
                 </div>
             </div>

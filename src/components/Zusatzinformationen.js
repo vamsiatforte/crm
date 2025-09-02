@@ -2,7 +2,7 @@
 import styles from './Zusatzinformationen.module.css';
 const Zusatzinformationen = () => {
     return (
-        <div className={`col-5  mb-3 ps-3 ${styles.ziContainer}`}>
+        <div className={`col-5  mb-3 ps-2 ${styles.ziContainer}`}>
             <div className={styles.ziCard}>
                 {/* Top Row */}
                 <div className="row pb-2">
