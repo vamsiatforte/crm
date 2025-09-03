@@ -158,3 +158,31 @@
 .smallButton:hover {
     background-color: #138496 !important;
 }
+.customInputRoot input{
+    padding: 0px;
+    color: white;
+    font-size: 0.8rem;
+    border-bottom: 2px solid white !important;
+}
+.dateInput input{
+    width: 85%;
+    font-size: 0.7rem;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.timeInput input{
+    width: 120%;
+    font-size: 0.7rem;
+    color: white;
+    border-bottom: 2px solid white;
+}.dateInput input::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+
+.timeInput input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.MuiFormControl-root{
+    width: 90% !important;
+}

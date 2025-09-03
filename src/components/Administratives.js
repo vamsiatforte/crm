@@ -1,8 +1,7 @@
 import styles from './Administratives.module.css';
-import DatePicker from 'react-datepicker';
 import { useState } from 'react';
-import 'react-datepicker/dist/react-datepicker.css';
 import { FaTimes } from 'react-icons/fa';
+import { TextField, MenuItem } from '@mui/material';
 
 const Administratives = () => {
     const [wiedervorlageDate, setWiedervorlageDate] = useState(new Date('2024-05-21'));
@@ -31,7 +30,7 @@ const Administratives = () => {
                     <div className="col-6 p-0">
                         <div className="mb-3">
                             <p className={`${styles.label} mb-1`}>Lead status</p>
-                            <div className={styles.selectWrapper}>
+                            <div className={`${styles.selectWrapper} ${styles.leadStatus} `}>
                                 <select className={styles.selectBottomBorder}>
                                     <option>C</option>
                                     <option>ABC</option>
@@ -40,9 +39,25 @@ const Administratives = () => {
                             </div>
                         </div>
                         <div className='col-12'>
-                            <p className={`mt-1 mb-2 ${styles.smallText}`}>Zusatz zu Leadstatus</p>
+                            <p className={`mt-1 mb-1 ${styles.smallText}`}>Zusatz zu Leadstatus</p>
                         </div>
-                        <div className={`col-12 mb-3 ${styles.selectBottomBorder}`}></div>
+                        <div className={`col-12 mb-3 ${styles.selectBottomBorder}`}>
+                            <TextField
+              variant="standard"
+              className={styles.borderPurpose1}
+              InputProps={{
+                disableUnderline: false,
+                style: {
+                  fontSize: '0.8rem',
+                  fontWeight: 'bold',
+                  color: '#333',
+                  padding: '0 4px',
+                  lineHeight: 1,
+                },
+              }}
+              fullWidth
+            />
+                        </div>
 
                         <div className='row align-items-center mb-2'>
                             <div className='col-8 pe-0'>
@@ -85,37 +100,40 @@ const Administratives = () => {
                             <div className='row'>
                                 <p className={`mb-1 ${styles.smallText}`}>Wiedervorlage</p>
                             </div>
-                            <div className='row mb-3'>
-                                <div className='col-7'>
-                                    <div className={`d-flex align-items-center ${styles.datePickerContainer} text-white`}>
-                                        <DatePicker
-                                            selected={wiedervorlageDate}
-                                            onChange={(date) => setWiedervorlageDate(date)}
-                                            dateFormat="dd/MM/yyyy"
+                            <div className='d-flex   mb-3'>
+                                <div className='w-75 me-1'>
+                                    <div className={`d-flex align-items-center  ${styles.datePickerContainer} text-white`}>
+                                        <TextField
+                                            variant="standard"
+                                            type="date"
                                             className={`${styles.dateInput} flex-grow-1`}
-                                            showPopperArrow={false}
-                                            popperPlacement="bottom-start"
-                                            wrapperClassName={styles.datePickerWrapper}
-                                            calendarClassName={styles.datePickerCalendar}
-                                            customInput={
-                                                <input
-                                                    style={{ color: 'white' }}
-                                                    className={`${styles.dateInput} flex-grow-1`}
-                                                />
-                                            }
+                                            InputLabelProps={{
+                                                shrink: true,
+                                            }}
+
+                                            placeholder="dd/mm/yyyy"
                                         />
-                                        <span className={`${styles.calendarIcon} ms-2`}>
-                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                                <path d="M8 2V5" strokeWidth="1.5" strokeLinecap="round" />
-                                                <path d="M16 2V5" strokeWidth="1.5" strokeLinecap="round" />
-                                                <path d="M3.5 9.09H20.5" strokeWidth="1.5" strokeLinecap="round" />
-                                                <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" strokeWidth="1.5" />
-                                            </svg>
-                                        </span>
+
                                     </div>
                                 </div>
-                                <div className='col-4'>
-                                    <div className={`col-12 ${styles.selectBottomBorder}`}><p>-----</p></div>
+                                <div className=''>
+                                    <div className={`col-12 ${styles.selectBottomBorder}`}>
+                                        <TextField
+                                            variant="standard"
+                                            className={styles.borderPurpose1}
+                                            InputProps={{
+                                                disableUnderline: false,
+                                                style: {
+                                                    fontSize: '0.8rem',
+                                                    fontWeight: 'bold',
+                                                    color: '#333',
+                                                    padding: '0 4px',
+                                                    lineHeight: 1,
+                                                },
+                                            }}
+                                            fullWidth
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +148,7 @@ const Administratives = () => {
                                 </button>
                             </div>
                             <div className='col-6'>
-                                <button 
+                                <button
                                     className={`btn btn-sm btn-info w-100 ${styles.smallButton}`}
                                     onClick={() => setShowCustomerNoteModal(true)} // Added click handler
                                 >

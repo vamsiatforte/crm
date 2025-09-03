@@ -1,6 +1,6 @@
 .kontakteContainer {
     background-color: white;
-    height: 60vh;
+    height: 67vh;
     padding-left: 0px;
     width: 100% !important;
 }
@@ -34,7 +34,6 @@
 
 /* Checkbox styling */
 .phoneCheckbox {
-    display: flex;
     align-items: center;
     height: 100%;
     padding-left: 0;
@@ -161,7 +160,8 @@
     border-radius: 0px;
 }
 .activeRow .editButton svg,
-.activeRow .tagButton svg {
+.activeRow .tagButton svg ,
+.avtiveRow .phoneIcon svg{
     color: white !important;
 }
 .contactDiv{

@@ -61,11 +61,15 @@
 .selectBottomBorder {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #dee2e6;
     padding: 0.25rem 0;
     background-color: transparent;
     font-size: 0.8rem;
     color: white;
+}
+.selectBottomBorder input{
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 0px;
 }
 
 .smallText {
@@ -316,5 +320,17 @@
 }
 
 .modalBody {
-    padding: 16px 24px; /* Reduced top/bottom padding from 24px */
+    padding: 16px 24px; 
+}
+.datePickerContainer input{
+    color: white;
+    padding: 0px;
+    font-size: 0.8rem;
+}
+.dateInput input::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+}
+.leadStatus{
+    border-bottom: 1px solid white;
 }

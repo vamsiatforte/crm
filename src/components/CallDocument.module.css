@@ -16,8 +16,6 @@
 }
 .adjustWidth{
   width: 61% !important;
-  height: 270px;
-  overflow: scroll;
 }
 .closeBtn {
   cursor: pointer;
@@ -32,6 +30,7 @@
 
 .question {
   margin-bottom: 2px;
+  font-size: 0.8rem;
 }
 
 .callHistorySection {
@@ -156,7 +155,7 @@
 }
 
 .callDate {
-    color: #333;
+    color: white;
     font-weight: normal;
 }
 
@@ -193,4 +192,30 @@
 .callHistoryBtn:hover {
     background-color: #138496;
     color: white;
+}
+.question{
+  padding: 0px;
+  margin: 0px;
+}
+.borderPurpose1{
+  padding: 0px;
+}
+.questionDiv{
+
+  height: 270px;
+  overflow: scroll;
+}
+
+.callDate{
+  width: 110% !important;
+}.callDate::-webkit-calendar-picker-indicator,
+.callTime::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(2) !important;
+}
+
+/* For Firefox date/time inputs text */
+input[type="date"],
+input[type="time"] {
+  color: white !important;
+  background-color: transparent !important;
 }

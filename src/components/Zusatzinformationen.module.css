@@ -4,9 +4,7 @@
 
 .ziCard {
   padding: 8px 20px;
-  /* border-radius: 6px; */
   background-color: #fff;
-  /* Added background */
 }
 
 .ziTitle {
@@ -17,8 +15,8 @@
 }
 
 .ziLabel {
-  color:black;
-  font-size: 0.8rem;
+  color: black;
+  font-size: 0.7rem;
   margin-bottom: 1px;
   display: block;
   font-weight: 900;
@@ -31,7 +29,6 @@
   padding: 0 4px;
   line-height: 1;
   color: #333;
-  /* Added color */
 }
 
 .ziSelect,
@@ -43,7 +40,6 @@
   border-bottom: 1.5px solid rgba(149, 144, 144, 0.979);
   background-color: transparent;
   color: #333;
-  /* Changed from white to dark color */
   line-height: 1.1;
   height: 20px;
   appearance: none;
@@ -69,7 +65,6 @@
   flex-grow: 1;
   height: 5px;
   background-color: #ccc;
-  /* border-radius: 3px; */
   overflow: hidden;
 }
 
@@ -91,7 +86,7 @@
   font-weight: bold;
   color: #00c851;
   position: absolute;
-  left:0;
+  left: 0;
   width: 56%;
   color: white;
   text-align: center;
@@ -99,9 +94,9 @@
   font-weight: 600;
   font-size: 22px;
   z-index: 1;
-      line-height: 14px;
-    font-weight: 600;
-    font-size: 10px;
+  line-height: 14px;
+  font-weight: 600;
+  font-size: 10px;
 }
 
 .specialHeight {
@@ -112,18 +107,60 @@
   justify-content: flex-end;
 }
 
-/* Dropdown options styling */
 .ziSelect option,
 .ziSelectFull option {
   color: #333;
-  /* Dark color for options */
   background-color: #fff;
-  /* White background for options */
   padding: 5px;
 }
 
-/* Focus state */
 .ziSelect:focus,
 .ziSelectFull:focus {
   border-bottom-color: #119bd5;
+}
+
+/* Custom Material UI input styling for Zusatzinformationen */
+.customZiInput {
+  width: 100%;
+}
+
+.customZiInput .MuiInput-input {
+  font-size: 0.7rem !important;
+  font-weight: bold !important;
+  /* padding: 0 4px !important; */
+  color: #333 !important;
+  border: none !important;
+  background: transparent !important;
+  line-height: 1 !important;
+}
+
+.customZiInput .MuiInput-underline:before {
+  border-bottom: 1.5px solid rgba(149, 144, 144, 0.979) !important;
+}
+
+.customZiInput .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 1.5px solid rgba(149, 144, 144, 0.979) !important;
+}
+
+.customZiInput .MuiInput-underline:after {
+  border-bottom: 2px solid rgba(149, 144, 144, 0.979) !important;
+}
+
+.customZiInput .MuiInputBase-root {
+  margin-top: 0 !important;
+}
+.persentageSpan{
+   position: absolute;
+  left: 0;
+  width: 50%;
+  color: white;
+  text-align: center;
+  line-height: 12px;
+  font-weight: 600;
+  font-size: 10px;
+  z-index: 1;
+}
+.customZiInput input{
+  padding: 0px !important;
+  line-height: 10px;
 }

@@ -9,11 +9,11 @@ import LeadProject from '../components/LeadProject';
 
 const CompaniesInformation = () => {
     const [selectedIndex, setSelectedIndex] = useState(null);
-    const [showForm, setShowForm] = useState(false); // Lift form state up
+    const [showForm, setShowForm] = useState(false); 
 
     const handleCloseCallDocument = () => {
-        setSelectedIndex(null); // Close CallDocument
-        setShowForm(false); // Also close the form in Kontakte
+        setSelectedIndex(null); 
+        setShowForm(false); 
     };
 
     return (
@@ -36,10 +36,11 @@ const CompaniesInformation = () => {
                     
                     <div className='p-2'>
                         {/* Main Sections */}
-                    <div className="row mt-2">
+                    <div className={`row mt-1 ${styles.companiesInformationBlockOne}`}>
                         <Unternehmensinformation />
                         <Zusatzinformationen />
                         <LeadProject/>
+                        {/* <Administratives/> */}
                     </div>
 
                     {/* Kontakte and Right Panel */}
@@ -52,7 +53,7 @@ const CompaniesInformation = () => {
                                 setShowForm={setShowForm}
                             />
                         </div>
-                        <div className="col-8">
+                        <div className="col-8 ps-2">
                             {selectedIndex !== null && (
                                 <CallDocument onClose={handleCloseCallDocument} />
                             )}

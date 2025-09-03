@@ -245,7 +245,6 @@ background-color:  rgb(247, 242, 242);
 
 .down {
   font-size: o.7rem;
-  border-bottom: 2px solid white;
   display: flex;
   justify-content: start;
   width: 100%;
@@ -273,4 +272,42 @@ background-color:  rgb(247, 242, 242);
 }
 .dataDiv{
   width: 100%;
+}
+.landDiv{
+  width: 25% !important;
+}
+.customInputRoot {
+  font-size: 0.7rem !important;
+  font-weight: bold !important;
+  color: #222 !important;
+  margin-bottom: 0 !important;
+  padding: 0 4px;
+}
+
+.customInputInput {
+  font-size: 0.7rem !important;
+  font-weight: bold !important;
+  color: #222 !important;
+  padding: 0;
+  margin: 0;
+}
+
+.customInputUnderline:before {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.customInputUnderline:hover:not(.Mui-disabled):before {
+  border-bottom: 2px solid #1976d2;
+}
+
+.customInputUnderline:after {
+  border-bottom: 2px solid #1976d2;
+}
+.down input{
+  padding: 0px;
+  color: white !important;
+  border-bottom: 2px solid white;
+}
+.companiesInformationBlockOne{
+  height: 240px;
 }

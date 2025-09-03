@@ -3,7 +3,8 @@ import { TextField, Select, MenuItem, InputLabel, FormControl, Checkbox, FormCon
 import styles from './Kontekte.module.css';
 import up from '../images/button_handset_up.svg';
 import down from '../images/button_handset_down.svg';
-import { FaStar, FaPencilAlt, FaTag, FaPlus, FaTimes } from 'react-icons/fa';
+import { FaStar, FaPencilAlt, FaTag, FaPlus, FaTimes, FaPhoneAlt } from 'react-icons/fa';
+
 
 const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => {
     const [activeTab, setActiveTab] = useState('kontakte');
@@ -65,14 +66,35 @@ const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => 
                                     <p className={styles.contactDate}>17/04/2025</p>
                                 </div>
                             </div>
-                            <div>
-                                <div className={`form-check ${styles.phoneCheckbox}`}>
-                                    <input type="checkbox" className={`form-check-input ${styles.checkboxInput}`} />
+                            <div className={`form-check ${styles.phoneCheckbox}`}>
+                                <div style={{ display: "flex", alignItems: "center" }} className={`${styles.phoneIcon}`}>
+                                    <FaPhoneAlt
+                                        style={{
+                                            marginRight: 6,
+                                            fontSize: "1em",
+                                        }}
+                                    />
+
+                                    <span style={{ fontSize: "1em" }}>51130034945</span>
+                                </div>
+                                <div style={{ display: "flex", alignItems: "center", marginLeft: 22, marginTop: 2 }}>
+                                    <input
+                                        type="checkbox"
+                                        className={`form-check-input ${styles.checkboxInput}`}
+                                        style={{ marginRight: 4 }}
+                                    />
+                                    <span style={{ fontSize: "0.98em" }}>0</span>
                                 </div>
                             </div>
                             <div>
                                 <div className="d-flex">
-                                    <button className={`btn btn-sm ${styles.editButton}`}><FaPencilAlt /></button>
+                                    <button
+                                        className={`btn btn-sm ${styles.editButton}`}
+                                        onClick={e => { e.stopPropagation(); setShowForm(true); }}
+                                    >
+                                        <FaPencilAlt />
+                                    </button>
+
                                     <button className={`btn btn-sm ${styles.tagButton} `}><FaTag /></button>
                                 </div>
                             </div>
@@ -82,7 +104,7 @@ const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => 
                         {selectedIndex === 0 && (
                             <div className={`row ${styles.contactDetailRow} `}>
                                 <div className="col-12 px-3 py-3">
-                                    <div className="row mb-3">
+                                    <div className="row mb-2">
                                         <div className="col-4">
                                             <TextField
                                                 label="Email Adresse"
