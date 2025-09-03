@@ -5,10 +5,16 @@ import Zusatzinformationen from '../components/Zusatzinformationen';
 import Administratives from '../components/Administratives';
 import Kontakte from '../components/Kontekte';
 import CallDocument from '../components/CallDocument'; 
-
+import LeadProject from '../components/LeadProject';
 
 const CompaniesInformation = () => {
     const [selectedIndex, setSelectedIndex] = useState(null);
+    const [showForm, setShowForm] = useState(false); // Lift form state up
+
+    const handleCloseCallDocument = () => {
+        setSelectedIndex(null); // Close CallDocument
+        setShowForm(false); // Also close the form in Kontakte
+    };
 
     return (
         <div className={`${styles.bgColor}`} style={{minWidth: "1350px"}}>
@@ -28,22 +34,28 @@ const CompaniesInformation = () => {
                     <div className='styles.sideLine'></div>
                     {/* Header */}
                     
-
                     <div className='p-2'>
                         {/* Main Sections */}
                     <div className="row mt-2">
                         <Unternehmensinformation />
                         <Zusatzinformationen />
-                        <Administratives />
+                        <LeadProject/>
                     </div>
 
                     {/* Kontakte and Right Panel */}
                     <div className="row ">
                         <div className="col-4 p-0">
-                            <Kontakte selectedIndex={selectedIndex} onContactSelect={setSelectedIndex} />
+                            <Kontakte 
+                                selectedIndex={selectedIndex} 
+                                onContactSelect={setSelectedIndex}
+                                showForm={showForm}
+                                setShowForm={setShowForm}
+                            />
                         </div>
                         <div className="col-8">
-                            {selectedIndex !== null && <CallDocument />}
+                            {selectedIndex !== null && (
+                                <CallDocument onClose={handleCloseCallDocument} />
+                            )}
                         </div>
                     </div>
                     </div>

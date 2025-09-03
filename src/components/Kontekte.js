@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { TextField, Select, MenuItem, InputLabel, FormControl, Checkbox, FormControlLabel } from '@mui/material';
 import styles from './Kontekte.module.css';
@@ -6,10 +5,8 @@ import up from '../images/button_handset_up.svg';
 import down from '../images/button_handset_down.svg';
 import { FaStar, FaPencilAlt, FaTag, FaPlus, FaTimes } from 'react-icons/fa';
 
-
-const Kontakte = ({ onContactSelect, selectedIndex }) => {
+const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => {
     const [activeTab, setActiveTab] = useState('kontakte');
-    const [showForm, setShowForm] = useState(false);
 
     const toggleOpen = (index) => {
         onContactSelect(selectedIndex === index ? null : index);
@@ -257,7 +254,6 @@ const Kontakte = ({ onContactSelect, selectedIndex }) => {
                         </p>
                     </div>
 
-              
                     {/* Modal for new contact */}
                     {showForm && (
                         <div className={styles.modalOverlay}>
@@ -370,8 +366,6 @@ const Kontakte = ({ onContactSelect, selectedIndex }) => {
                             </div>
                         </div>
                     )}
-
-
                 </>
             )}
 

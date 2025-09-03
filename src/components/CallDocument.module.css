@@ -16,6 +16,8 @@
 }
 .adjustWidth{
   width: 61% !important;
+  height: 270px;
+  overflow: scroll;
 }
 .closeBtn {
   cursor: pointer;

@@ -1,5 +1,4 @@
 .kontakteContainer {
-    font-size: 12px;
     background-color: white;
     height: 60vh;
     padding-left: 0px;
@@ -8,7 +7,7 @@
 
 /* Table headers */
 .tableHeader p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 4px;
 }
@@ -17,7 +16,7 @@
 .contactRow {
     padding: 8px 0;
     border-top: 1px solid #dee2e6;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     width: 103%;
 }
 
@@ -75,26 +74,26 @@
 
 /* Text styles */
 .contactName {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 500;
     margin-bottom: 2px;
     color: rgb(6, 179, 247);
 }
 
 .contactPosition {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #ccc;
     margin-bottom: 0;
 }
 
 .leadStatus {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 500;
     margin-bottom: 2px;
 }
 
 .contactDate {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #ccc;
     margin-bottom: 0;
 }
@@ -105,7 +104,7 @@
 }
 
 .favoritesText {
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 /* Form styles */
@@ -117,7 +116,7 @@
 }
 
 .form-label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #333;
 }
 
@@ -130,7 +129,7 @@
 
 .form-control,
 .form-select {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 2px 4px;
     height: auto;
     border: none;
@@ -166,7 +165,7 @@
     color: white !important;
 }
 .contactDiv{
-    border-left: 2px solid skyblue;
+    border-left: 7px solid skyblue;
     padding-left: 11px;
 }
 .navDiv{
@@ -241,7 +240,7 @@
 /* Form Title */
 .formTitle {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 0.8rem;
   margin: 0;
   flex-grow: 1;
   text-align: center;
@@ -251,7 +250,7 @@
 .closeButton {
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 0.8rem;
   cursor: pointer;
   color: #666;
   padding: 0;
@@ -271,4 +270,5 @@
 .formText{
     margin-top: 20px;
     font-size: 1rem;
+    cursor: pointer;
 }

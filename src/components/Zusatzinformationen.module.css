@@ -3,7 +3,7 @@
 }
 
 .ziCard {
-  padding: 20px 20px;
+  padding: 8px 20px;
   /* border-radius: 6px; */
   background-color: #fff;
   /* Added background */
@@ -14,19 +14,18 @@
   margin-bottom: 6px;
   font-weight: bold;
   color: #333;
-  /* Added color */
 }
 
 .ziLabel {
   color:black;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   margin-bottom: 1px;
   display: block;
   font-weight: 900;
 }
 
 .ziValue {
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: bold;
   border-bottom: 1.5px solid rgba(149, 144, 144, 0.979);
   padding: 0 4px;
@@ -38,7 +37,7 @@
 .ziSelect,
 .ziSelectFull {
   width: 100%;
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   font-weight: 500;
   border: none;
   border-bottom: 1.5px solid rgba(149, 144, 144, 0.979);
@@ -88,7 +87,7 @@
 }
 
 .ziPercent {
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: #00c851;
   position: absolute;
@@ -106,6 +105,7 @@
 }
 
 .specialHeight {
+  margin-bottom: 5px;
   height: 32px;
   display: flex;
   flex-direction: column;

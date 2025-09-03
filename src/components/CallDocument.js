@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './CallDocument.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const CallDocument = () => {
-    const [visible, setVisible] = useState(true);
-
-    if (!visible) return null;
-
+const CallDocument = ({ onClose }) => {
     return (
         <div className={`container-fluid ${styles.wrapper} p-2`}>
             <div className="row">
@@ -63,7 +59,7 @@ const CallDocument = () => {
                             <p className={`fw-bold m-0 ${styles.AnsprecheTitle}`}>Ansprechpartner Rating</p>
                         </div>
                         <div className="col-1 text-end">
-                            <span className={styles.closeBtn} onClick={() => setVisible(false)}>✕</span>
+                            <span className={styles.closeBtn} onClick={onClose}>✕</span>
                         </div>
                     </div>
 
