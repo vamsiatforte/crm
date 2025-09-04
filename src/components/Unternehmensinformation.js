@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../screens/CompaniesInformation.module.css';
+import styles from './Unternehmensinformation.module.css';
 import buttonVisit from '../images/button_visit_url.svg';
 import google from '../images/button_google.svg';
 import linkedin from '../images/button_linkedin.svg';
@@ -173,13 +173,19 @@ const Unternehmensinformation = () => {
           {/* Row 1 - Logos */}
           <div className="d-flex justify-content-between gap-2">
             <div className={`${styles.firmaImgDiv}`}>
-              <img className={styles.firmaImg} src={google} height={'60px'} alt="Google" />
+              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                <img className={styles.firmaImg} src={google} height={'60px'} alt="Google" />
+              </a>
             </div>
-            <div  className={`${styles.firmaImgDiv}`}>
-              <img className={styles.firmaImg} src={linkedin} alt="LinkedIn" />
+            <div className={`${styles.firmaImgDiv}`}>
+              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                <img className={styles.firmaImg} src={linkedin} alt="LinkedIn" />
+              </a>
             </div>
-            <div  className={`${styles.firmaImgDiv}`}>
-              <img className={styles.firmaImg} src={xing} alt="Google Again" />
+            <div className={`${styles.firmaImgDiv}`}>
+              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                <img className={styles.firmaImg} src={xing} alt="Xing" />
+              </a>
             </div>
           </div>
 
@@ -268,7 +274,6 @@ const Unternehmensinformation = () => {
           />
         </div>
       </div>
-
     </div>
   );
 };

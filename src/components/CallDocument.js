@@ -3,6 +3,8 @@ import styles from './CallDocument.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { TextField, MenuItem } from '@mui/material';
+import ausgeschieden from '../images/button_ausgeschieden.svg';
+import blackList from '../images/button_blacklisting.svg';
 
 const CallDocument = ({ onClose }) => {
   return (
@@ -10,83 +12,82 @@ const CallDocument = ({ onClose }) => {
       <div className="row">
        
         <div className={`col-7  ${styles.adjustWidth}`}>
-           <div className="col-12">
+          <div className="col-12">
             <p className={`m-0  ${styles.callText}`}>
               Call Dokumentation <span className={styles.name}>(Daniel Stoffel)</span>
             </p>
+          </div>
+          <div className={`${styles.questionDiv}`}>
+            <div className={`col-12 mt-2`}>
+              <p className={`text-primary m-0 ${styles.question}`}>Wenn "ja" mit welchen</p>
+              <TextField
+                variant="standard"
+                className={styles.borderPurpose1}
+                InputProps={{
+                  disableUnderline: false,
+                  style: {
+                    fontSize: '0.8rem',
+                    fontWeight: 'bold',
+                    color: '#333',
+                    padding: '0 4px',
+                    lineHeight: 1,
+                  },
+                }}
+                fullWidth
+              />
+            </div>
 
-          </div>
-        <div className={`${styles.questionDiv}`}>
-              <div className={`col-12 mt-2`}>
-            <p className={`text-primary m-0 ${styles.question}`}>Wenn "ja" mit welchen</p>
-            <TextField
-              variant="standard"
-              className={styles.borderPurpose1}
-              InputProps={{
-                disableUnderline: false,
-                style: {
-                  fontSize: '0.8rem',
-                  fontWeight: 'bold',
-                  color: '#333',
-                  padding: '0 4px',
-                  lineHeight: 1,
-                },
-              }}
-              fullWidth
-            />
-          </div>
+            <div className="col-12 mt-2">
+              <p className={`text-primary m-0 ${styles.question}`}>Ist Ihnen eine Integration in SAP wichtig?</p>
+              <TextField
+                select
+                variant="standard"
+                size="small"
+                fullWidth
+                className={styles.callselect}
+                defaultValue=""
+              >
+                <MenuItem value="">-----</MenuItem>
+                <MenuItem value="one">one</MenuItem>
+                <MenuItem value="two">two</MenuItem>
+              </TextField>
+            </div>
 
-          <div className="col-12 mt-2">
-            <p className={`text-primary m-0 ${styles.question}`}>Ist Ihnen eine Integration in SAP wichtig?</p>
-            <TextField
-              select
-              variant="standard"
-              size="small"
-              fullWidth
-              className={styles.callselect}
-              defaultValue=""
-            >
-              <MenuItem value="">-----</MenuItem>
-              <MenuItem value="one">one</MenuItem>
-              <MenuItem value="two">two</MenuItem>
-            </TextField>
-          </div>
+            <div className="col-12 mt-2">
+              <p className={`text-primary m-0 ${styles.question}`}>Nutzen Sie bereits eine Software zur Steuerung Wartungs- und Serviceprozessen?</p>
+              <TextField
+                select
+                variant="standard"
+                size="small"
+                fullWidth
+                className={styles.callselect}
+                defaultValue=""
+              >
+                <MenuItem value="">-----</MenuItem>
+                <MenuItem value="one">one</MenuItem>
+                <MenuItem value="two">two</MenuItem>
+              </TextField>
+            </div>
 
-          <div className="col-12 mt-2">
-            <p className={`text-primary m-0 ${styles.question}`}>Nutzen Sie bereits eine Software zur Steuerung Wartungs- und Serviceprozessen?</p>
-            <TextField
-              select
-              variant="standard"
-              size="small"
-              fullWidth
-              className={styles.callselect}
-              defaultValue=""
-            >
-              <MenuItem value="">-----</MenuItem>
-              <MenuItem value="one">one</MenuItem>
-              <MenuItem value="two">two</MenuItem>
-            </TextField>
+            <div className={`col-12 mt-2`}>
+              <p className={`text-primary m-0 ${styles.question}`}>Wenn "ja" mit welchen</p>
+              <TextField
+                variant="standard"
+                className={styles.borderPurpose1}
+                InputProps={{
+                  disableUnderline: false,
+                  style: {
+                    fontSize: '0.8rem',
+                    fontWeight: 'bold',
+                    color: '#333',
+                    padding: '0 4px',
+                    lineHeight: 1,
+                  },
+                }}
+                fullWidth
+              />
+            </div>
           </div>
-
-          <div className={`col-12 mt-2`}>
-            <p className={`text-primary m-0 ${styles.question}`}>Wenn "ja" mit welchen</p>
-            <TextField
-              variant="standard"
-              className={styles.borderPurpose1}
-              InputProps={{
-                disableUnderline: false,
-                style: {
-                  fontSize: '0.8rem',
-                  fontWeight: 'bold',
-                  color: '#333',
-                  padding: '0 4px',
-                  lineHeight: 1,
-                },
-              }}
-              fullWidth
-            />
-          </div>
-        </div>
         </div>
 
         <div className={`col-4 bg-dark text-white  ${styles.Anspreche}`}>
@@ -119,7 +120,18 @@ const CallDocument = ({ onClose }) => {
                 Notiz(intern)
               </button>
 
-              <p className="m-0 my-2">Ausgeschieden</p>
+              <button
+                type="button"
+                className={styles.iconButtonWrapper}
+                onClick={() => {
+                  // Add Ausgeschieden click logic here
+                  console.log('Ausgeschieden clicked');
+                }}
+                aria-label="Ausgeschieden"
+              >
+                <img className={styles.callDocumentIcon} src={ausgeschieden} alt="Ausgeschieden" />
+                <span>Ausgeschieden</span>
+              </button>
             </div>
 
             <div className="col-7">
@@ -151,7 +163,16 @@ const CallDocument = ({ onClose }) => {
               <button className={`btn btn-secondary btn-sm w-100 mt-2 ${styles.notizBtn}`} type="button">
                 Notiz(Kundensetig)
               </button>
-              <p className='m-0 my-2'>Zur Blacklist</p>
+
+              <button
+                type="button"
+                className={styles.iconButtonWrapper}
+                
+              >
+                <img className={styles.callDocumentIcon} src={blackList} alt="Zur Blacklist" />
+                <span>Zur Blacklist</span>
+              </button>
+             
             </div>
           </div>
 

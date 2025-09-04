@@ -229,3 +229,38 @@ input[type="time"] {
   margin-right: 33px;
 }
 }
+.callDocumentIcon{
+  height: 30px;
+  width: 30px;
+}
+.iconButtonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.iconButtonWrapper:hover {
+  text-decoration: underline;
+}
+
+.iconButtonWrapper span {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.iconButtonWrapper img {
+  height: 30px;
+  width: 30px;
+  display: block;
+}
+.iconButtonWrapper{
+  font-size: 0.8rem;
+}
