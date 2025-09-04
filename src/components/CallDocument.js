@@ -9,7 +9,7 @@ const CallDocument = ({ onClose }) => {
     <div className={`container-fluid ${styles.wrapper} `}>
       <div className="row">
        
-        <div className={`col-7 me-4 ${styles.adjustWidth}`}>
+        <div className={`col-7  ${styles.adjustWidth}`}>
            <div className="col-12">
             <p className={`m-0  ${styles.callText}`}>
               Call Dokumentation <span className={styles.name}>(Daniel Stoffel)</span>
@@ -177,7 +177,7 @@ const CallDocument = ({ onClose }) => {
               </div>
             </div>
 
-            <div className={styles.buttonContainer}>
+            <div className={styles.buttonContainer} d-flex justify-content-center m-4>
               <button className={`btn ${styles.callHistoryBtn}`} type="button">
                 Call history
               </button>

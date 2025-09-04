@@ -5,7 +5,6 @@ import up from '../images/button_handset_up.svg';
 import down from '../images/button_handset_down.svg';
 import { FaStar, FaPencilAlt, FaTag, FaPlus, FaTimes, FaPhoneAlt } from 'react-icons/fa';
 
-
 const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => {
     const [activeTab, setActiveTab] = useState('kontakte');
 
@@ -51,12 +50,17 @@ const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => 
                     <div style={{ width: '97%' }}>
                         <div
                             className={`d-flex justify-content-between  ${styles.contactRow} ${selectedIndex === 0 ? styles.activeRow : ''}`}
-                            onClick={() => toggleOpen(0)}
-                            style={{ cursor: 'pointer' }}
+                            style={{ cursor: 'default' }}
                         >
                             <div>
                                 <div className={`d-flex flex-column ${styles.contactDiv}`}>
-                                    <p className={styles.contactName}>Daniel Stoffel</p>
+                                    <p
+                                        className={styles.contactName}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => toggleOpen(0)}
+                                    >
+                                        Daniel Stoffel
+                                    </p>
                                     <p className={styles.contactPosition}>Teamleiter Instandhaltung /</p>
                                 </div>
                             </div>
@@ -69,12 +73,8 @@ const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => 
                             <div className={`form-check ${styles.phoneCheckbox}`}>
                                 <div style={{ display: "flex", alignItems: "center" }} className={`${styles.phoneIcon}`}>
                                     <FaPhoneAlt
-                                        style={{
-                                            marginRight: 6,
-                                            fontSize: "1em",
-                                        }}
+                                        style={{ marginRight: 6, fontSize: "1em" }}
                                     />
-
                                     <span style={{ fontSize: "1em" }}>51130034945</span>
                                 </div>
                                 <div style={{ display: "flex", alignItems: "center", marginLeft: 22, marginTop: 2 }}>
@@ -94,15 +94,16 @@ const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => 
                                     >
                                         <FaPencilAlt />
                                     </button>
-
-                                    <button className={`btn btn-sm ${styles.tagButton} `}><FaTag /></button>
+                                    <button className={`btn btn-sm ${styles.tagButton}`}>
+                                        <FaTag />
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         {/* Expanded Material UI Form */}
                         {selectedIndex === 0 && (
-                            <div className={`row ${styles.contactDetailRow} `}>
+                            <div className={`row ${styles.contactDetailRow}`}>
                                 <div className="col-12 px-3 py-3">
                                     <div className="row mb-2">
                                         <div className="col-4">
@@ -267,7 +268,7 @@ const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => 
                     <div className='d-flex justify-content-end'>
                         <p
                             onClick={() => setShowForm(true)}
-                            className={`${styles.formText}`}
+                            className={styles.formText}
                         >
                             Neuen Ansprechpartner anlegen{' '}
                             <span>
@@ -394,7 +395,6 @@ const Kontakte = ({ onContactSelect, selectedIndex, showForm, setShowForm }) => 
             {/* Favorites Tab Content */}
             {activeTab === 'favorites' && (
                 <div style={{ minHeight: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-
                 </div>
             )}
         </div>

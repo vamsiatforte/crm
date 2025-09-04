@@ -45,7 +45,7 @@ const CompaniesInformation = () => {
 
                     {/* Kontakte and Right Panel */}
                     <div className="row ">
-                        <div className="col-4 p-0">
+                        <div className="col-4 p-0 bg-white">
                             <Kontakte 
                                 selectedIndex={selectedIndex} 
                                 onContactSelect={setSelectedIndex}
@@ -53,7 +53,7 @@ const CompaniesInformation = () => {
                                 setShowForm={setShowForm}
                             />
                         </div>
-                        <div className="col-8 ps-2">
+                        <div className="col-8 ps-2 ">
                             {selectedIndex !== null && (
                                 <CallDocument onClose={handleCloseCallDocument} />
                             )}

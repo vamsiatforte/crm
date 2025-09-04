@@ -4,6 +4,7 @@ import buttonVisit from '../images/button_visit_url.svg';
 import google from '../images/button_google.svg';
 import linkedin from '../images/button_linkedin.svg';
 import outlook from '../images/outlook.svg';
+import xing from '../images/button_xing.svg';
 import up from '../images/button_handset_up.svg';
 import down from '../images/button_handset_down.svg';
 import callHistory from '../images/button_callhistory_presets.svg';
@@ -14,13 +15,13 @@ import { TextField } from '@mui/material';
 const Unternehmensinformation = () => {
   return (
     <div className={`col-4 ${styles.Unternehmensinformation}`}>
-      <div className="d-flex mb-3">
+      <div className={`d-flex ${styles.unteInfo} `}>
         {/* First Row with spacing */}
         <div className={`col-9 bg-white ${styles.unteDiv}`}>
           <p className="fw-bold mb-0 mt-1">Unternehmensinformation</p>
 
           <div className="d-flex justify-content-between">
-            <div className={`${styles.dataDiv}`}>
+            <div className={`flex-2 ${styles.dataDiv}`}>
               <p className={styles.label}>Firma</p>
               <TextField
                 variant="standard"
@@ -52,7 +53,7 @@ const Unternehmensinformation = () => {
 
           {/* Second Row with spacing */}
           <div className="d-flex justify-content-between ">
-            <div className={`${styles.dataDiv}`}>
+            <div className={`${styles.dataDiv} `}>
               <p className={styles.label}>Straße</p>
               <TextField
                 variant="standard"
@@ -145,7 +146,7 @@ const Unternehmensinformation = () => {
               />
             </div>
             <div>
-              <img width={'40px'} height={'20px'} src={buttonVisit} alt="Visit Button" />
+              <img width={'40px'} height={'20px'} className={`${styles.unteImg}`} src={buttonVisit} alt="Visit Button" />
             </div>
             <div className={`${styles.dataDiv}`}>
               <p className={styles.label}>telefon</p>
@@ -170,15 +171,15 @@ const Unternehmensinformation = () => {
           </div>
 
           {/* Row 1 - Logos */}
-          <div className="d-flex justify-content-between">
-            <div>
-              <img className={styles.firmaImg} src={google} alt="Google" />
+          <div className="d-flex justify-content-between gap-2">
+            <div className={`${styles.firmaImgDiv}`}>
+              <img className={styles.firmaImg} src={google} height={'60px'} alt="Google" />
             </div>
-            <div>
+            <div  className={`${styles.firmaImgDiv}`}>
               <img className={styles.firmaImg} src={linkedin} alt="LinkedIn" />
             </div>
-            <div>
-              <img className={styles.firmaImg} src={google} alt="Google Again" />
+            <div  className={`${styles.firmaImgDiv}`}>
+              <img className={styles.firmaImg} src={xing} alt="Google Again" />
             </div>
           </div>
 
