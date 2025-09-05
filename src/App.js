@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Example from './screens/Example'; 
 import Companies from './screens/Companies';
 import CompaniesInformation from './screens/CompaniesInformation';
+import TextEditor from './components/TextEditor';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         
       //   {ManagerRoutes}
       // </Routes>
-       <CompaniesInformation/>
+      //  <CompaniesInformation/>
+      <TextEditor/>
   );
 }
 
